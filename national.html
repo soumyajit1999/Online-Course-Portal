@@ -1,0 +1,561 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CoursePlus</title>
+    <!-- CoursePlus CSS -->
+    <link href="https://storage.googleapis.com/swayam2_central/assets/css/swayam_css/bootstrap.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    
+    <!-- STYLE for POP-up on landing page -->
+    <style>
+    .modal-backdrop{
+        opacity:0.8 !important;
+    }
+    
+    @media (min-width: 992px) {
+        #homePageModal {
+        text-align: center;
+        padding: 0!important;
+        }
+    
+        #homePageModal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+        }
+    
+        #homePageModal .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+        }
+    }
+    
+    @media (max-width: 768px) {
+    .modal-dialog.modal-sm {
+        width: 300px;
+        margin: 30px auto;
+    }
+    }
+    </style>
+    <!-- END :: STYLE for POP-up on landing page -->
+    
+    <!-- CoursePlus JS -->
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://storage.googleapis.com/swayam2_central/assets/js/swayam_js/jquery.js"></script>
+    <script src="https://storage.googleapis.com/swayam2_central/assets/js/swayam_js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    var idleTime = 0;
+    $(document).ready(function () {
+        //home page modal triggered here based on session storage check
+        let popUpFlagVal = sessionStorage.getItem("popUpFlag");
+        if(popUpFlagVal !== "true" || popUpFlagVal === "undefined"){
+            $("#homePageModal").modal({
+                show: true,
+                backdrop: 'static',
+                keyboard: false
+            });
+            sessionStorage.setItem("popUpFlag", "true");
+        }
+        //Increment the idle time counter every minute.
+        var currentUserEmail = 'None'
+    
+        if (currentUserEmail != "None"){
+           var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+        }
+    
+    
+        //Zero the idle timer on mouse movement.
+        $(this).mousemove(function (e) {
+            idleTime = 0;
+        });
+        $(this).keypress(function (e) {
+            idleTime = 0;
+        });
+    });
+    
+    function timerIncrement() {
+        idleTime = idleTime + 1;
+    }
+    </script>
+    </head>
+    <body class="homepage" cz-shortcut-listen="true">
+    <header id="header">
+    <!--Top Bar [START]-->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+            <div class="col-sm-3 col-xs-12 top-left">
+                <a class="navbar-brand" href="main.html">
+                    <img src="https://scontent.fccu3-1.fna.fbcdn.net/v/t1.0-9/164072082_1379326135752823_5891110949319784736_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=730e14&_nc_ohc=vQC5z1s-BMQAX-__Ttv&_nc_ht=scontent.fccu3-1.fna&oh=5e57bbae44c9bd94b857f48a2e35d909&oe=6080C131" 
+                    alt="CoursePlus-logo">
+                </a>
+                &nbsp; &nbsp; &nbsp;                 
+            </div>
+            <div class="col-sm-9 col-xs-12">
+                <div class="top-navigation">
+                    <a href="about.html">About CoursePlus</a> |
+                    <a href="national.html">National Coordinators</a> |
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    <!--Top Bar [END]-->
+    
+    <!--Menu Container [START]-->
+    <div class="container">
+        <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+            <!--Mobile + Brand Logo [START]-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!--Mobile + Brand Logo [END]-->
+    
+            <!--Main Menu [START]-->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="all.html" class="dropdown-toggle" data-toggle="dropdown">
+                        ALL COURSES
+                    </a>
+                <li>
+                    <form class="form-search" action="/explorer">
+                    <div class="form-group search">
+                        <input id="header-search-query" name="searchText" type="text" class="input-medium search-query" placeholder="Search Catalog..." value="">
+                        <span class="search_keyword" onclick="redirectToCatalogWithSearchQuery(event)">
+                            <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/icon_search_16px.png">
+                        </span>
+                    </div>
+                    </form>
+                </li>
+    
+                <li>
+                    <a href="login_signup.html" style="padding-top:0px;">
+                    <button type="submit" name="submit" class="btn btn-primary btn-lg" style="margin: 0px;">
+                        Sign-In / Register
+                    </button>
+                    </a>
+                </li>
+                </ul>
+            </div>
+            <!--Main Menu [END]-->
+            </div>
+        </nav>
+        </div>
+    </div>
+    <!--Menu Container [END]-->
+    </header>
+    
+    <script>
+    function redirectToCatalogWithSearchQuery(event) {
+        // Proceed only if user clicks on Search icon
+        if (event.type == "click") {
+            document.location = "/explorer?searchText=" + document.getElementById('header-search-query').value;
+        }
+    }
+    </script>
+    <!--Breadcrumb [START]-->
+    
+    <div class="bccontainer NCdetails">
+    <div class="container breadcrumb">
+        <div> <a href="main.html">Home</a> &gt; <a>National Coordinators</a> </div>
+        <div class="blueBarTitle">National Coordinators</div>
+    </div>
+    <p class="container paddingBottom32">
+        In order to ensure best quality content are produced and delivered, nine National Coordinators have been appointed.
+        They are AICTE for self-paced and international courses. NPTEL for engineering,
+        UGC for non technical post-graduation education, CEC for under-graduate education,
+        NCERT &amp; NIOS for school education, IGNOU for out of the school students, IIMB for management studies and
+        NITTTR for Teacher Training programme.
+      </p>
+    </div>
+    <div class="container">
+    <center>
+      <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <a href="https://www.aicte-india.org/" class="shadowBox">
+              <div class="image">
+                <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/AICTE_logo_128.png" width="128px" height="128px">
+              </div>
+              <div class="content2">
+                <div class="title">AICTE</div>
+                <div class="description">AICTE (All India council for Technical education)</div>
+              </div>
+            </a>
+          </div>
+        
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <a href="http://cec.nic.in/cec/" class="shadowBox">
+              <div class="image">
+                <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/CEC-logo.png" width="128px" height="128px">
+              </div>
+              <div class="content2">
+                <div class="title">CEC</div>
+                <div class="description">Consortium for Educational Communication (CEC), New Delhi</div>
+              </div>
+            </a>
+          </div>
+        
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <a href="http://ignou.ac.in/" class="shadowBox">
+              <div class="image">
+                <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/IGNOU-logo.png" width="128px" height="128px">
+              </div>
+              <div class="content2">
+                <div class="title">IGNOU</div>
+                <div class="description">Indira Gandhi National Open University (IGNOU)</div>
+              </div>
+            </a>
+          </div>
+        
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <a href="https://www.iimb.ac.in/home" class="shadowBox">
+              <div class="image">
+                <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/IIMB_logo_128.png" width="128px" height="128px">
+              </div>
+              <div class="content2">
+                <div class="title">IIMB</div>
+                <div class="description">IIM Bangalore</div>
+              </div>
+            </a>
+          </div>
+        
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <a href="https://ncert.nic.in/" class="shadowBox">
+              <div class="image">
+                <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/NCERT_logo_128.png" width="128px" height="128px">
+              </div>
+              <div class="content2">
+                <div class="title">NCERT</div>
+                <div class="description">National Council of Educational Research and Training (NCERT)</div>
+              </div>
+            </a>
+          </div>
+        
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <a href="https://www.nios.ac.in/" class="shadowBox">
+              <div class="image">
+                <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/NIOS_logo_128.png" width="128px" height="128px">
+              </div>
+              <div class="content2">
+                <div class="title">NIOS</div>
+                <div class="description">National  Institute of Open Schooling (NIOS)</div>
+              </div>
+            </a>
+          </div>
+        
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <a href="http://www.nitttrkol.ac.in/" class="shadowBox">
+              <div class="image">
+                <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/NITTTR_logo_128.png" width="128px" height="128px">
+              </div>
+              <div class="content2">
+                <div class="title">NITTTR</div>
+                <div class="description">National Institute of Technical Teachers Training and Research</div>
+              </div>
+            </a>
+          </div>
+        
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <a href="https://nptel.ac.in/" class="shadowBox">
+              <div class="image">
+                <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/NPTEL_logo_128.png" width="128px" height="128px">
+              </div>
+              <div class="content2">
+                <div class="title">NPTEL</div>
+                <div class="description">NPTEL</div>
+              </div>
+            </a>
+          </div>
+        
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <a href="https://www.ugc.ac.in/" class="shadowBox">
+              <div class="image">
+                <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/UGC_logo_128.png" width="128px" height="128px">
+              </div>
+              <div class="content2">
+                <div class="title">UGC</div>
+                <div class="description">University Grants Commission </div>
+              </div>
+            </a>
+          </div>
+      </div>
+    </center>
+    </div>
+    
+    
+    <section class="main">
+    <section id="social">
+      <div class="container">
+    
+          <div class="row appcontainer">
+            <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
+              <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/mhrd_logo.png" style="margin-top:18px;">
+              <img src="https://scontent.fccu3-1.fna.fbcdn.net/v/t1.0-9/164600720_1379326905752746_2178493731832397688_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=730e14&_nc_ohc=de20bLLYzCsAX9Atggj&_nc_ht=scontent.fccu3-1.fna&oh=93f3b0b084a8b558f1f7f8016f3e479b&oe=60803295"
+              style="margin-top: 12px;margin-left: 20px;">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-7 col-xs-12">
+              <h4>FOLLOW US</h4>
+              
+              <ul class="social_icons">
+                <li><a href="#"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/icon_social/icon_facebook_selected.png" class="facebook"></a></li>
+                <li><a href="#"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/icon_social/icon_instagram_selected.png" class="instagram"></a></li>
+                <li><a href="#"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/icon_social/icon_twitter_selected.png" class="twitter"></a></li>
+              </ul>
+            </div>
+          </div>
+    
+      </div>
+    </section>
+    
+    <section id="legal">
+      <div class="container">
+    
+      <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-12">
+    
+      <a href="Privacy.html">Privacy Policy</a></div>
+    
+      <div class="col-md-6 col-sm-6 col-xs-12 helpline">   
+        <a href="#" onclick="email_form()" id="support_popup">CoursePlus Helpline / Support</a> </div>
+    
+      </div>
+      </div>
+    </section>
+    <!--/#bottom-->
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6"> © 2021 CoursePlus. All rights reserved. </div>
+          <div class="col-sm-6">
+            <div class="pull-right"> Initiative by : Ministry of Education (Govt of India) </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--/#footer-->
+    <!--Popup form for support-->
+    
+    <div class="pop_up_container">
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" style="color: #a7b836;opacity: 1;" data-dismiss="modal" type="button">×</button>
+                        <h4 class="modal-title" style="color:#a7b836;font-family: 'Roboto';font-size: 20px">CoursePlus SUPPORT</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <p style="font-family: 'Roboto';font-size: 20px">Please choose the CoursePlus National Coordinator for support.<span class="text-danger">*</span> :</p>
+                            <select id="nc_email" onchange="display_nc_email()">
+                              <option disabled="" selected="">select</option>
+                              <option value="sensoumyajit1999@gmail.com">CEC</option>
+                              <option value="sensoumyajit1999@gmail.com">IIMB</option>
+                              <option value="soumyadeepbasu1998.sb@gmail.com">IGNOU</option>
+                              <option value="soumyadeepbasu1998.sb@gmail.com">NCERT</option>
+                              <option value="djoy.njoy@gmail.com">NITTTR</option>
+                              <option value="djoy.njoy@gmail.com">NIOS</option>
+                              <option value="tirtharajbaneerjee326@gmail.com">AICTE</option>
+                              <option value="tirtharajbaneerjee326@gmail.com">NPTEL</option>
+                            </select>
+                            <br> <br>
+                            <div id="nc_email_text" style="font-family: 'Roboto';font-size: 18px;margin-left: -20px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+    .modal-content > .modal-header {
+       background:#003366;
+    }
+    .modal-dialog {
+        width: 800px;
+    }
+    </style>
+    
+    <script>
+    function email_form(){
+        try{
+            $("#myModal").modal('show');
+        }catch(e){
+            jQuery.noConflict();
+            $("#myModal").modal('show');
+        }
+    
+    }
+    function display_nc_email(){
+        document.getElementById("nc_email_text").innerHTML = "Please send an email to <b>" + document.getElementById("nc_email").value + "</b> regarding your queries / issues";
+    }
+    </script>
+    </section>
+    <style>
+      .main{
+       position: absolute;
+       bottom: 0px;
+       width: 100%;
+       }
+       @media (max-width: 767px) {
+       body{
+       padding-bottom: 400px;
+       }
+       }
+       @media (min-width: 768px) and (max-width: 991px) {
+       body{
+       padding-bottom: 240px;
+       }
+       }
+       @media (min-width: 992px) {
+       body{
+       padding-bottom: 175px;
+       }
+       }
+    
+    </style>
+    <script>
+    $('.carousel').carousel({
+      interval: 5000
+    })
+    </script>
+    
+    
+    <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+    
+    $(document).ready(function() {
+    
+      $(".CheckboxContainer .container").click(function(){
+    
+          $("input[type='checkbox']").click(function(e){
+    
+              $div = $(this).parent();
+              text = $div[0].firstChild.nodeValue;
+              id_text = text.replace(/\s+/g, "");
+              id_text = id_text.replace("&", "_");
+    
+              if($(this).prop("checked") == true){
+                $(".sf-filtertags ul").prepend("<li>"+text+"<a href='#' name='"+text+"' id='"+id_text+"' onclick='removeTagAndUncheck(this.id,this.name)'> X </a></li>");
+              }
+              else{
+                $("#"+id_text).parent().remove();
+              }
+    
+              clearAllShowHide();
+              e.stopImmediatePropagation();
+            });
+        });
+    
+        $('.dropdown-submenu a.submenu').on("click", function(e){
+            $.each($(".dropdown-submenu div.dropdown-menu"), function(){
+                if($(this).is(":visible")) {
+                    if( $( "div" ).index( $(this).parent() ) != $( "div" ).index( $(e.target).next('div.dropdown-menu').parent() ) ){
+                        $(this).css("display","none");
+                        $(this).parent().find("i").removeClass("fa-angle-right");
+                        $(this).parent().find("i").addClass("fa-angle-down");
+                    }
+                }
+            });
+    
+            $(e.target).next('div').toggle();
+    
+            if(($(e.target).next('div')).is( ":visible" )){
+                $(e.target).find("i").removeClass("fa-angle-down");
+                $(e.target).find("i").addClass("fa-angle-right");
+            }
+            else{
+                $(e.target).find("i").removeClass("fa-angle-right");
+                $(e.target).find("i").addClass("fa-angle-down");
+            }
+            e.stopPropagation();
+            e.preventDefault();
+        });
+    
+        $(".dropdown").on("show.bs.dropdown", function(event){
+            $( event.target).find("div.dropdown-menu").css("display","table") ;
+            $(event.target).find("i").removeClass("fa-angle-right");
+            $(event.target).find("i").addClass("fa-angle-down");
+        });
+        $(".dropdown").on("shown.bs.dropdown", function(){
+            $('.dropdown-submenu a.submenu').next('div').toggle();
+        });
+        $(".dropdown").on("hide.bs.dropdown", function(event){
+            $( event.target).find("div.dropdown-menu").css("display","none") ;
+        });
+    });
+    
+    function clearAllShowHide(){
+      if ( $('.sf-filtertags ul li').length > 2 ) {
+        $("#clearAllTags").css("visibility","visible");
+      }else{
+        $("#clearAllTags").css("visibility","hidden");
+      }
+    }
+    
+    function removeTagAndUncheck(id, name){
+      $("input[name='"+name.trim()+"']:checkbox").prop('checked', false);
+      $("#"+id).parent().remove();
+      clearAllShowHide();
+    }
+    
+    function clearAllTags(){
+      $('.sf-filtertags ul').empty();
+      $('.sf-filtertags ul').prepend('<li id="clearAllTags" style="border:none;visibility: hidden;" onclick="clearAllTags()"><a href="#">Clear All</a></li>');
+      $('input:checkbox').removeAttr('checked');
+      clearAllShowHide();
+    }
+    
+    //Hide Dropdown popover on out-focus
+    $(document).on("focusin", function(event){
+        var $trigger = $(".dropdown");
+        if($trigger !== event.target && !$trigger.has(event.target).length){
+            $(".dropdown-menu").slideUp("fast");
+        }
+    });
+    
+    $(window).click(function() {
+        $(".dropdown-menu").slideUp("fast");
+    });
+    </script>
+    
+    <script>
+    $('a').click(function(){
+        if($(this).text().trim() == 'Show More' ){
+            $(this).html('Show Less <i class="fa fa-chevron-up"></i>');
+        }
+        else if($(this).text().trim() == 'Show Less' ){
+             $(this).html('Show More <i class="fa fa-chevron-down"></i>');
+        }
+    });
+    </script>
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-168173053-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+    
+    
+    
+    </body></html>

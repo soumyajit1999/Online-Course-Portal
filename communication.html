@@ -1,0 +1,1054 @@
+<html>
+<head><!-- Shady DOM styles for custom-style --><!-- Shady DOM styles for dom-template --><!-- Shady DOM styles for dom-repeat --><!-- Shady DOM styles for array-selector --><!-- Shady DOM styles for dom-if --><!-- Shady DOM styles for iron-request --><!-- Shady DOM styles for iron-ajax --><!-- Shady DOM styles for paper-spinner --><!-- Shady DOM styles for course-card --><style scope="course-card">span.vCenter.course-card {
+    display: table-cell;
+                  vertical-align: middle;
+  }</style><!-- Shady DOM styles for course-cards --><!-- Shady DOM styles for course-card-grouper --><style scope="course-card-grouper">course-cards.course-card-grouper {
+    margin-bottom: 32px;
+              position: relative;
+  }</style><!-- Shady DOM styles for course-status-selector --><!-- Shady DOM styles for iron-a11y-announcer --><style scope="iron-a11y-announcer">iron-a11y-announcer {
+    display: inline-block;
+        position: fixed;
+        clip: rect(0px,0px,0px,0px);
+  }</style><!-- Shady DOM styles for iron-meta --><!-- Shady DOM styles for iron-meta-query --><!-- Shady DOM styles for iron-input --><!-- Shady DOM styles for paper-input-char-counter --><!-- Shady DOM styles for paper-input-container --><!-- Shady DOM styles for paper-input-error --><!-- Shady DOM styles for paper-input --><!-- Shady DOM styles for course-category-selector --><!-- Shady DOM styles for course-duration-selector --><!-- Shady DOM styles for filter-sidebar --><!-- Shady DOM styles for paper-material --><!-- Shady DOM styles for paper-ripple --><style scope="paper-ripple">paper-ripple {
+    display: block;
+          position: absolute;
+          border-radius: inherit;
+          overflow: hidden;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+  
+          
+          pointer-events: none;
+  }
+  
+  paper-ripple[animating] {
+    -webkit-transform: translate(0, 0);
+          transform: translate3d(0, 0, 0);
+  }
+  
+  #background.paper-ripple, #waves.paper-ripple, .wave-container.paper-ripple, .wave.paper-ripple {
+    pointer-events: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+  }
+  
+  #background.paper-ripple, .wave.paper-ripple {
+    opacity: 0;
+  }
+  
+  #waves.paper-ripple, .wave.paper-ripple {
+    overflow: hidden;
+  }
+  
+  .wave-container.paper-ripple, .wave.paper-ripple {
+    border-radius: 50%;
+  }
+  
+  paper-ripple.circle #background.paper-ripple, paper-ripple.circle #waves.paper-ripple {
+    border-radius: 50%;
+  }
+  
+  paper-ripple.circle .wave-container.paper-ripple {
+    overflow: hidden;
+  }</style><!-- Shady DOM styles for paper-button --><!-- Shady DOM styles for course-explorer --><style scope="course-explorer">#load-more-button.course-explorer {
+    position: relative;
+                  
+                  margin-bottom: 50px;
+  }
+  
+  paper-spinner.course-explorer {
+    position: relative;
+                  
+                  top: 11px;
+                  left: auto;
+  }</style><style>body {transition: opacity ease-in 0.2s; } 
+  body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+  </style>
+      <!-- script type="text/jscript" src="https://storage.googleapis.com/swayam2-node/modules/explorer/_static/js/mobile_redirect.js" charset="utf-8"></script -->
+      <base href="https://onlinecourses.swayam2.ac.in/nou21_lg05/">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link rel="icon" href="https://storage.googleapis.com/swayam2-node/assets/img/favicon.ico">
+      <meta charset="utf-8">
+      
+    <title>
+      BAL-002: Communication Skills -
+      
+        
+        Course
+      
+    </title>
+  
+      <!-- jQuery should be imported first -->
+      <script async="" src="https://static.addtoany.com/menu/svg/icons.29.svg.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.RrjSsKk8Szw.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPwd_oodKkRT_hYRO1I-9xRcQV4oQ/cb=gapi.loaded_0" async=""></script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+      <script src="https://storage.googleapis.com/swayam2-node/modules/ajax_registry/assets/js/registry.js"></script>
+  
+  
+      <!-- The following translated strings are used in activity-generic.js and should be
+      declared before that file is imported. -->
+      <script>
+        // inline translations
+        var trans = {};
+  
+        
+        trans.CHECK_ANSWER_TEXT =
+            " Check Answer ";
+  
+        
+        trans.CHECK_ANSWERS_TEXT =
+            " Check Answers ";
+  
+        
+        trans.SHOW_ANSWER_TEXT =
+            " Skip and Show Answer ";
+  
+        
+        trans.SAVE_ANSWERS_TEXT =
+            " Save Answers ";
+  
+        
+        trans.SAVE_DRAFT_TEXT =
+            " Save Draft ";
+  
+        
+        trans.SUBMIT_ANSWERS_TEXT =
+            " Submit Answers ";
+  
+        
+        trans.SUBMIT_ASSIGNMENT_TEXT =
+            " Submit Assignment ";
+  
+        
+        trans.SUBMIT_REVIEW_TEXT =
+            " Submit Review ";
+  
+        
+        trans.SELECT_ANSWER_PROMPT =
+            " Please click one of the buttons for your answer. ";
+  
+        
+        trans.ALL_CORRECT_TEXT =
+            " All your answers are correct! ";
+  
+        
+        trans.NUM_CORRECT_TEXT =
+            " Number of questions you answered correctly ";
+  
+        
+        trans.YOUR_SCORE_TEXT =
+            " You received a score on this assessment of ";
+  
+        
+        trans.LESSONS_TO_REVIEW_TEXT =
+            " Here are lessons you could review to improve your score ";
+  
+        
+        trans.PERFECT_SCORE_SAVE_TEXT =
+            " Congratulations! Press the \'Submit Answers\' button to submit your grade. ";
+  
+        
+        trans.GENERIC_SAVE_TEXT =
+            " Press the \'Submit Answers\' button below to save your scores. You can also edit your answers above before clicking \'Submit Answers\'. ";
+  
+        
+        trans.SUBMIT_ASSIGNMENT_CONFIRMATION =
+            " Are you sure you want to submit this assignment? ";
+  
+        
+        trans.SUBMIT_REVIEW_CONFIRMATION =
+            " Are you sure you want to submit this review? ";
+  
+        
+        trans.CONFIRMATION_EXPLANATION =
+            " You cannot edit or delete it after you have done so. ";
+      </script>
+  
+      
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="icon" href="https://storage.googleapis.com/swayam2-node/assets/img/favicon.ico">
+    <link href="https://storage.googleapis.com/swayam2-node/assets/css/main.css" rel="stylesheet" type="text/css">
+    <link href="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/css/nptel.css" rel="stylesheet" type="text/css">
+    <link href="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/css/chosen.min.css" rel="stylesheet" type="text/css">
+    <link href="https://storage.googleapis.com/swayam2-node/assets/css/minimal.mobile.css" rel="stylesheet" type="text/css" media="only screen and (max-device-width: 1024px)">
+    <link href="https://storage.googleapis.com/swayam2-node/assets/css/preview.css" rel="stylesheet" type="text/css">
+  
+    <!-- jQuery should be imported first -->
+    <script src="https://storage.googleapis.com/swayam2-node/static/jquery/jquery.min.js"></script>
+    <script src="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/chosen.jquery.min.js"></script>
+    <script src="https://storage.googleapis.com/swayam2-node/modules/oeditor/_static/js/butterbar.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/swayam2-node/modules/oeditor/_static/css/butterbar.css" media="screen">
+    <script src="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/main.js"></script>
+  
+    <script src="https://www.gstatic.com/charts/loader.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    /* Comment : Accessibility :Alternate text added for an instructor profile photo */
+      $(document).ready(function(){
+          $("img.profilePhoto").attr('alt', 'Instructor profile photo');
+      });
+      function addScript(src, callback) {
+        var r = false;
+        var existed = true;
+        var element = document.getElementById(src);
+        if (!element) {
+          existed = false;
+          element = document.createElement('script');
+          element.src = src;
+          element.type = 'text/javascript';
+          element.setAttribute('id', src);
+        }
+        if (callback != null) {
+          element.onload = element.onreadystatechagne = function() {
+            if (!r && (!this.readyState || this.readyState == 'complete')) {
+              r = true;
+              callback();
+            }
+          }
+        }
+        if (!existed) document.body.appendChild(element);
+      }
+      function getStudentProgress() {
+        
+      }
+      function prettyfyCode() {
+        prettyPrint();
+      }
+      function showButterBar() {
+        
+        var regConfirmationMsg = "Thank you for registering for the course. Click the Announcements tab for important information.";
+        if(window.location.hash == '#registration_confirmation') {
+          cbShowMsg(regConfirmationMsg);
+          setTimeout(function() {cbHideMsg();}, 20000);
+        }
+        
+        var regClosedMsg = "Registrations for this course are not open.";
+        if(window.location.hash == '#registration_closed') {
+          cbShowMsg(regClosedMsg);
+          setTimeout(function() {cbHideMsg();}, 20000);
+        }
+      }
+      function loadOtherJs(callback) {
+        var c = getStudentProgress;
+        if (null != callback) {
+          c = function() {
+             callback();
+             getStudentProgress();
+          }
+        }
+        addScript('https://storage.googleapis.com/swayam2-node/assets/lib/google-code-prettify/prettify.js', prettyfyCode);
+        addScript('https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/activity-generic-1.3.js', null);
+        addScript('https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/main.js', c);
+      }
+      function downloadJsAtLoad() { loadOtherJs(null); }
+      google.charts.load('current', {packages: ['corechart']});
+      google.charts.setOnLoadCallback(downloadJsAtLoad);
+    </script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/loader.js"></script>
+   
+  
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Course",
+        "@id": "https://onlinecourses.swayam2.ac.in/nou21_lg05/",
+        "name": "BAL-002: Communication Skills",
+        "description": "",
+        "provider": {
+          "@type":"Organization",
+          "name":"Indira Gandhi National Open University",
+          "sameAs":"http://nptel.iitm.ac.in"
+        },
+        "grantsCredential": "False",
+        "isAccessibleForFree" : "True",
+  
+        "hasCourseInstance" : [
+        {
+          "inLanguage" : "en",
+          "audioLanguage" : ["en"],
+          "startDate" : "2021-02-14T18:30:00.000000Z"
+          }
+        ],
+        
+          "image" : "/modules/nptel/assets/img/nptel-logo.png"
+        
+      }
+    </script>
+
+      <script>
+        var eventXsrfToken = '';
+        
+  
+        
+          var transientStudent = true;
+        
+      </script>
+  
+      
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js" gapi_processed="true"></script>
+      
+  
+      <script>
+        function gcb_edit_hook_point(key) {
+          window.location=('dashboard?action=edit_html_hook&key=' +
+              encodeURIComponent(key));
+        }
+        $(function() {
+          // TODO(nretallack): This duplicates code in
+          // modules/dashboard/resources/js/view.js.
+          function parseJson(s) {
+            var xssiPrefix = ")]}'";
+            return JSON.parse(s.replace(xssiPrefix, ''));
+          }
+  
+          $("#locale-select").change(function() {
+            var localeSelect = $("#locale-select");
+            var request = JSON.stringify({
+              xsrf_token: localeSelect.data("xsrf-token"),
+              payload: {
+                selected: localeSelect.val()
+              }
+            });
+            $.ajax({
+              url: "rest/locale",
+              type: "POST",
+              data: {request: request},
+              dataType: "text",
+              success: function(data) {
+                data = parseJson(data);
+                if (data.status == 200) {
+                  window.location.reload();
+                }
+              }
+            });
+          });
+        });
+      </script>
+</head>  
+<body data-gcb-page-locale="en_US" class="homepage" style=""><div class="gcb-html-hook" id="base-before-head-tag-ends"><!-- base.before_head_tag_ends --></div>
+  
+
+  
+    <div class="invisiblePopupDiv" id="termsDiv">
+       <div class="gcb-pull-right">
+       <a class="closeXButton" onclick="hidePopupDiv(&quot;termsDiv&quot;); return false;" style="margin-left: 10px">X</a>
+       </div>
+       <iframe src="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/html/terms.html" class="popupIframe"></iframe>
+      </div>
+    <div class="invisiblePopupDiv" id="honorDiv">
+       <div class="gcb-pull-right">
+       <a class="closeXButton" onclick="hidePopupDiv(&quot;honorDiv&quot;); return false;" style="margin-left: 10px">X</a>
+       </div>
+       <iframe src="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/html/honor_code.html" class="popupIframe"></iframe>
+      </div>
+    <div class="invisiblePopupDiv" id="faqDiv">
+       <div class="gcb-pull-right">
+       <a class="closeXButton" onclick="hidePopupDiv(&quot;faqDiv&quot;); return false;" style="margin-left: 10px">X</a>
+       </div>
+       <iframe src="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/html/faq.html" class="popupIframe"></iframe>
+    </div>
+
+    <div class="gcb-html-hook" id="base-after-body-tag-begins"><!-- base.after_body_tag_begins --></div>
+
+    
+      <script>
+        // Course-Builder specific setup for Google Tag Manager.  Iff
+        // Tag Managers is enabled, the values in the dataLayer list of
+        // dicts is made available to Tag Manager macros.
+        dataLayer = [{
+          'course_title': 'BAL-002: Communication Skills',
+          'event': 'default',  // Explicit value meaning not-really-set.
+          }];
+
+        function gcbSetPageInfo(dict) {
+          dataLayer.push(dict);
+        }
+
+        // Invoke page-specific block so that any calls to gcbReportPageInfo()
+        // are made before we hit the Tag Manager call, below.
+        
+  if ('gcbSetPageInfo' in window) {
+    gcbSetPageInfo({
+      'page_type': 'preview',
+    });
+  }
+
+      </script>
+
+      
+    
+
+    <!-- ButterBar -->
+    <div class="gcb-butterbar-container">
+      <div id="gcb-butterbar-top" class="gcb-butterbar" style="margin-top:50px" aria-live="polite">
+        <p id="gcb-butterbar-message"></p>
+        <a id="gcb-butterbar-close">X</a>
+      </div>
+    </div>
+
+    <!-- header starts-->
+    
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Swayam CSS -->
+    <link href="https://storage.googleapis.com/swayam2-node/assets/css/swayam_css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://storage.googleapis.com/swayam2-node/assets/css/swayam_css/main.css" rel="stylesheet">
+    <link href="https://storage.googleapis.com/swayam2-node/assets/css/swayam_css/home_page.css" rel="stylesheet">
+    <link rel="icon" href="https://storage.googleapis.com/swayam2-node/assets/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Swayam JS -->
+    <script src="https://storage.googleapis.com/swayam2-node/assets/js/swayam_js/jquery.js"></script>
+    <script src="https://storage.googleapis.com/swayam2-node/assets/js/swayam_js/bootstrap.min.js"></script>
+    <!-- Restrict CSS/JS loading from external CDN. Reverting to cloudflare as its not working from our CDN. Check this later -->
+    <!--link rel="stylesheet" href="https://storage.googleapis.com/swayam2-node/assets/css/swayam_css/font-awesome.min.css" -->
+    <script src="https://storage.googleapis.com/swayam2-node/static/polymer-1.2.0/webcomponentsjs/webcomponents-lite.js"></script>
+    
+    <style>
+  /* IE 10 support for HTML5 hidden attr */
+  [hidden] {
+    display: none !important;
+  }
+</style><style></style><style></style><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700"><style></style><style></style><style></style><link rel="import" href="/modules/explorer/_static/components/course-explorer/course-explorer.html">
+    <style>
+        .top-navigation {
+            margin-bottom: 10px;
+        }
+
+        .top-navigation a {
+            padding: 15px 4px;
+        }
+
+        .introTitle {
+            opacity: 0.6;
+            font-family: Roboto;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            color: #000000;
+        }
+
+        .welcomeTitle {
+            font-size: 24px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            color: #44688e;
+        }
+
+        ul.dropdown-menu {
+            margin-top: 14px;
+            padding-top: 0;
+            text-align: left;
+            left: -25px;
+            width: 240px;
+            overflow: auto;
+        }
+
+        table td {
+            font-size: 16px;
+        }
+
+        table img {
+            max-height: 100px;
+            max-width: 100px;
+        }
+
+        #loading-img {
+            background: url(https://storage.googleapis.com/swayam2-node/assets/img/swayam_images/loading.gif) center center no-repeat;
+            height: 100%;
+            z-index: 1001;
+        }
+
+        .overlay {
+            background: #e9e9e9;
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0.8;
+            z-index: 1001;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
+
+
+<header id="header" role="banner">
+    <!--Top Bar [START]-->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-xs-12 top-left">
+                    <a class="navbar-brand" href="main.html">
+                        <img src="https://scontent.fccu3-1.fna.fbcdn.net/v/t1.0-9/164072082_1379326135752823_5891110949319784736_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=730e14&_nc_ohc=vQC5z1s-BMQAX-__Ttv&_nc_ht=scontent.fccu3-1.fna&oh=5e57bbae44c9bd94b857f48a2e35d909&oe=6080C131">
+                    </a>
+                    &nbsp; &nbsp; &nbsp;
+                                       
+                </div>
+                <div class="col-sm-9 col-xs-12">
+                    <div class="top-navigation">
+                        <a href="about.html">About Us</a> |
+                        <a href="all.html">All Courses</a> |
+                        <div class="dropdown" style="display: inline-block;">
+                            
+                                <a href="login_signup.html" style="padding-top:0px;">
+                                    <button type="submit" name="submit" class="btn btn-primary btn-lg" style="margin: 0px;">
+                                        Sign-In / Register
+                                    </button>
+                                </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<script>
+    function showAllCourses(node_code) {
+        if (node_code === "nd1") {
+            if (window.location.pathname === "/") {
+                const {top} = $('.explore-courses').offset();
+                window.scrollTo(0, top - 100);
+            } else {
+                window.location.href = "/";
+            }
+        }else{
+            window.location.href = "https://swayam.gov.in/explorer";
+        }
+    }
+
+</script>
+    <!-- header ends -->
+
+  
+  <!--12 Col Container [START]-->
+<div class="previewCourseBox">
+<div class="bccontainer boxMarginBottom" style="padding-bottom: 8px; padding-top: 62px;"></div>
+
+  <!-- nav bar -->
+    <div class="container breadcrumb">
+      <a href="all.html">Courses</a><span> &gt;</span>
+    </div>
+
+  <div class="container" style="color:#28293d;">
+    <h1 class="courseTitle">BAL-002: Communication Skills</h1>
+    <div class="instructorName">
+        By Dr Mohammad Saleem &nbsp; | &nbsp;
+        Indira Gandhi National Open University
+    </div>
+
+    <div style="display: inline-block;">
+        
+          
+  <div>
+      <a href="/update_profile_and_register?user_email=&amp;raw_slug=/nou21_lg05" id="register-button">
+        <button class="btn btn-primary btn-lg joinCourse">
+          
+          Join
+        </button>
+      </a>
+  </div>
+
+        
+    </div>
+  </div>
+</div>
+<!--12 Col Container [END]-->
+  <div class="gcb-html-hook" id="preview-after-top-content-ends"></div>
+
+
+    <div>
+        <div class="is-wrapper">
+          <div>
+
+            <div class="gcb-html-hook" id="base-after-top-content-ends"><!-- base.after_top_content_ends --></div>
+
+            <!-- main section -->
+            
+  <!--9 Col + 3 Col Container [START] -->
+<div style="background-color: #fafafc;">
+<div class="container">
+  <div class="row marginTop25">
+    <!--9 col [start]-->
+    <div class="col-md-7 col-xs-12">
+
+      <div class="marginTop20">
+      
+          <iframe width="100%" height="320" src="https://www.youtube.com/embed/MDLi_YAedV4?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+          </iframe>
+      
+      </div>
+
+      <div class="marginTop25 previewContent"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+justify;text-justify:inter-ideograph;line-height:normal"><span style="font-size: 12pt;"><span style="font-family: &quot;Times New Roman&quot;, serif;">This programme
+aims at acquainting the beginners with essential rudiments of the Arabic
+Language, and gradually and systematically inculcates in them an ability to
+speak, write and read the language with a certain degree of accuracy and
+confidence.</span><br><br><b style="font-family: &quot;Arial Black&quot;;">Course Credit - 8</b></span></p></div>
+
+    </div>
+    <!--3 col [start]-->
+    <div class="col-md-4 col-md-offset-1 col-xs-12 marginTop20">
+      <div class="previewTitle">Summary</div>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="previewContent marginTop20">
+        <tbody><tr>
+          <td nowrap="nowrap">Course Status :</td>
+          
+              <td>Upcoming</td>
+          
+          
+        </tr>
+        <tr>
+          <td>Course Type :</td>
+          
+              <td>Core</td>
+          
+        </tr>
+        <tr>
+          <td>Duration :</td>
+          
+              <td>12 weeks</td>
+          
+        </tr>
+        <tr>
+          <td>Start Date :</td>
+          
+              <td>15 Feb 2021</td>
+          
+        </tr>
+        <tr>
+          <td>End Date :</td>
+          
+              <td></td>
+          
+        </tr>
+        <tr>
+          <td>Exam Date :</td>
+          
+              <td></td>
+          
+        </tr>
+        
+        <!--<tr>-->
+          <!--<td>Effort :</td>-->
+          <!---->
+              <!--<td></td>-->
+          <!---->
+        <!--</tr>-->
+<!--        <tr>-->
+<!--          <td>Credits :</td>-->
+<!--          -->
+<!--              <td>8</td>-->
+<!--          -->
+<!--        </tr>-->
+        <tr>
+          <td style="height: 40px; vertical-align: initial;">Category :</td>
+          <td>
+            <!---->
+            <ul style="margin-left: 18px;">
+       
+                      <li class="summary_category">Humanities and Social Sciences</li>
+
+            </ul>
+          </td>
+        </tr>
+        <!--<tr>-->
+          <!--<td>Subject :</td>-->
+          <!--<td>Economics</td>-->
+        <!--</tr>-->
+        <!--Hiding these fields till we decide on when to include them-->
+        <tr>
+          <td>Level :</td>
+          <td>Diploma</td>
+        </tr>
+        <!--<tr>-->
+          <!--<td>Discipline :</td>-->
+          <!--<td></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td>Offering Institution :</td>-->
+          <!--<td>Indian Institute of Management, Bangalore</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td>Language :</td>-->
+          <!--<td>English</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td>Video Transcripts :</td>-->
+          <!--<td>English, Hindi</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td>Price :</td>-->
+          <!--<td>FREE</td>-->
+        <!--</tr>-->
+      </tbody></table>
+      
+      <br>
+      <!--Social media sharing implementation BEGIN -->
+      <!-- AddToAny BEGIN -->
+		<style type="text/css">
+		.a2a_menu, .a2a_menu_find_container { border-radius: 0 !important; }
+		.a2a_svg { height: 40px; width: 40px; }
+		/* Accessibility color contrast fixes in 'a2a_label' class */
+		.a2a_label, .a2a_label:hover { background-color: #1F1F1F !important }
+		</style>
+
+
+		<script>
+		var a2a_config = a2a_config || {};
+		a2a_config.num_services = 0;  // No of services set to 0 in mini AddToAny menu
+		a2a_config.onclick = 2; // Jump to main AddToAny menu
+		// Excluded as to avoid repeatation of platforms
+		a2a_config.exclude_services = ["facebook", "twitter", "linkedin", "email", "whatsapp"];
+		</script>
+		<script type="text/javascript" async="" src="//static.addtoany.com/menu/page.js"></script>
+      <!-- AddToAny END -->
+      <!--Social media sharing implementation END-->
+    </div>
+    <!--3 col [End]-->
+  </div>
+</div>
+<br><br>
+</div>
+<!--9 Col + 3 Col Container [END] -->
+<div class="container">
+  
+  <div class="row marginTop25">
+    <div class="col-md-7 col-xs-12">
+      <h3 class="courseTitle">Course layout</h3>
+      <div class="previewContent marginTop20">
+          <div class="yui-wk-div"><span id="docs-internal-guid-448fc956-7fff-ed3a-1f9f-6bf43a3b6441"><br>
+            <div dir="ltr" style="margin-left:0pt;" align="left">
+                <table style="border:none;border-collapse:collapse;"><colgroup><col width="116"><col width="475"></colgroup><tbody><tr style="height:23.25pt"><td colspan="2" style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#fff2cc;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;text-align: center;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 12pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">BAL-002: Communication Skills</span></p></td></tr>
+                    <tr style="height:23.25pt"><td colspan="2" style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#d9ead3;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 12pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Block 1: Listening And Speaking-I</span></p></td></tr><tr style="height:23.25pt"><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#cfe2f3;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Week-1</span></p></td><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#cfe2f3;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-1: Conversation Between Teacher and Student</span></p></td></tr><tr style="height:23.25pt"><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#fde9d9;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Week-2</span></p></td><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#fde9d9;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-2: Conversation Inside The Office</span></p></td></tr><tr style="height:44.25pt"><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#c9daf8;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Week-3</span></p></td><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#c9daf8;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-3: Conversation Between Mother and Child;</span></p><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-4: Conversation Between Father and Son</span></p></td></tr><tr style="height:44.25pt"><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#fde9d9;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Week-4</span></p></td><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#fde9d9;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-5: Conversation Between Brother and Sister;</span></p><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-6: Conversation Between Two Friends</span></p></td></tr><tr style="height:23.25pt"><td colspan="2" style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#d9ead3;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 12pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Block 2: Listening And Speaking-II</span></p></td></tr><tr style="height:23.25pt"><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#cfe2f3;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Week-5</span></p></td><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#cfe2f3;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-7: Conversation In The Vegetable Market</span></p></td></tr><tr style="height:44.25pt"><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#fde9d9;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Week-6</span></p></td>
+                        <td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#fde9d9;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-8: Conversation In The Fruit Market;</span></p><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-9: Conversation In The Stationary Shop</span></p></td></tr><tr style="height:23.25pt"><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#cfe2f3;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Week-7</span></p></td><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#cfe2f3;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-10: Conversation In The Taxi Stand</span></p></td></tr><tr style="height:44.25pt"><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#fde9d9;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Week-8</span></p></td><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#fde9d9;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-11: Conversation In The Railway Station;</span></p><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-12: Conversation In The Airport</span></p></td></tr><tr style="height:23.25pt"><td colspan="2" style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#d9ead3;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 11.5pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Block 3: Listening And Speaking-III</span></p></td></tr><tr style="height:23.25pt"><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#cfe2f3;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Week-9</span></p></td><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#cfe2f3;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-13: Conversation Between Employer And Employee</span></p></td></tr><tr style="height:44.25pt"><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#fde9d9;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Week-10</span></p></td><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#fde9d9;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-14: Conversation Between Doctor and Patient;</span></p><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-15: Conversation Between Tourist and Guide</span></p></td></tr><tr style="height:23.25pt"><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#cfe2f3;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Week-11</span></p></td><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#cfe2f3;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-16: Conversation Between Two Students</span></p></td></tr><tr style="height:44.25pt"><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#fde9d9;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Week-12</span></p></td><td style="border-left:solid #000000 0.9960975000000001pt;border-right:solid #000000 0.9960975000000001pt;border-bottom:solid #000000 0.9960975000000001pt;border-top:solid #000000 0.9960975000000001pt;vertical-align:top;background-color:#fde9d9;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;">
+                            <p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-17: Conversation In A Restaurant;</span></p><p dir="ltr" style="line-height:1.2;margin-top:12pt;margin-bottom:0pt;"><span style="font-size: 10pt; font-family: Arial; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Unit-18: Conversation on Looking for Job</span></p></td></tr></tbody></table></div></span></div></div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="row marginTop25">
+    <div class="col-md-7 col-xs-12">
+      <h3 class="courseTitle">Instructor bio</h3>
+      <div class="previewContent marginTop20"><div class="yui-wk-div">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="https://storage.googleapis.com/swayam-node2-production.appspot.com/assets/img/nou19_hs09/Dr.Md.Saleem.jpg" class="yui-img" title="" alt="" style="width: 190px; height: 170px;"><br><span style="font-weight: bold;">Dr Mohammad Saleem</span> is an assistant Professor of Arabic at the School of Foreign Languages. His area of specialisation is teaching and learning Arabic as a foreign language. He writes in Arabic Urdu and English and published more than thirty articles in all the three languages in various reputed magazines and news papers. He is the first to advocate new methods and techniques for teaching Arabic as foreign language in his research work for M Phil titled Methods of Arabic language study in Indian madrasas between teaching and achievement and PhD titled Teaching and learning Arabic as a foreign language in India,problems and prospects with twenty model lessons.</div><div class="yui-wk-div"><br></div><div class="yui-wk-div">His other areas of interest are culture and literature of Pre Islamic Period. He also takes keen interest in Arabic, Urdu and Persian Poetry. Currently, Dr Saleem has designed along with several young Arabic experts, a very simple, innovative and learner friendly study material for the learners at IGNOU. The material is increasingly becoming popular both is India and Arab countries.</div><div class="yui-wk-div"><br></div><div class="yui-wk-div">Official Address:</div><div class="yui-wk-div"><br></div><div class="yui-wk-div">School of Foreign Languages,&nbsp;</div><div class="yui-wk-div">Indira Gandhi National Open University,</div><div class="yui-wk-div">Maidan Garhi, New Delhi - 110068,&nbsp;</div><div class="yui-wk-div">New Delhi, India</div><div class="yui-wk-div">Phone:&nbsp; 29571637</div><div class="yui-wk-div">Email: saleem@ignou.ac.in</div></div>
+    </div>
+  </div>
+  
+  
+
+  <br><br>
+
+</div>
+  <div class="gcb-html-hook" id="preview-after-main-content-ends"></div>
+
+            <div class="gcb-html-hook" id="base-after-main-content-ends"><!-- base.after_main_content_ends --></div>
+          </div>
+        </div>
+    </div>
+
+    
+
+
+
+
+    <!-- footer section -->
+    <section class="main">
+<section id="social">
+  <!-- Comment : Accessibility :Alternate text added for all img tags in footer -->
+  <div class="container">
+
+      <div class="row appcontainer">
+        <!--<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" style="padding-top:12px"> <img src="https://storage.googleapis.com/swayam2-node/assets/img/swayam_images/social_GOI.jpg" /> </div>-->
+        <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
+          <img src="https://storage.googleapis.com/swayam2-node/assets/img/swayam_images/mhrd_logo.png" alt="MHRD logo" style="margin-top:18px">
+          <img src="https://scontent.fccu3-1.fna.fbcdn.net/v/t1.0-9/164600720_1379326905752746_2178493731832397688_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=730e14&_nc_ohc=de20bLLYzCsAX9Atggj&_nc_ht=scontent.fccu3-1.fna&oh=93f3b0b084a8b558f1f7f8016f3e479b&oe=60803295" style="margin-top: 12px;margin-left: 20px;">
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 ">
+          <h4>FOLLOW US</h4>
+          <!--<img src="https://storage.googleapis.com/swayam2-node/assets/img/swayam_images/social.jpg" />-->
+          <ul class="social_icons">
+            <li><img src="https://storage.googleapis.com/swayam2-node/assets/img/swayam_images/icon_social/icon_facebook_selected.png" alt="Goto facebook follow page" class="facebook"></li>
+            <li><img src="https://storage.googleapis.com/swayam2-node/assets/img/swayam_images/icon_social/icon_instagram_selected.png" alt="Goto instagram follow page" class="instagram"></li>
+            <!--<li><a href="#"><img src="https://storage.googleapis.com/swayam2-node/assets/img/swayam_images/icon_social/icon_linkedin_selected.png" class="linkedin"/></a></li>-->
+            <li><img src="https://storage.googleapis.com/swayam2-node/assets/img/swayam_images/icon_social/icon_twitter_selected.png" alt="Goto twitter follow page" class="twitter"></li>
+            <!--<li><a href="#"><img src="https://storage.googleapis.com/swayam2-node/assets/img/swayam_images/icon_social/icon_youtube_selected.png" class="youtube"/></a></li>-->
+          </ul>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<section id="legal">
+  <div class="container">
+
+  <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+
+  <a href="Privacy.html">Privacy Policy</a>   <span>|</span>   <a href="#">Terms of Use</a>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 helpline">   <a style="cursor:pointer" onclick="email_form()" id="support_popup">CoursePlus Helpline / Support</a> </div>
+
+  </div>
+  </div>
+</section>
+<!--/#bottom-->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6"> © 2021 CoursePlus. All rights reserved. </div>
+      <div class="col-sm-6">
+        <div class="pull-right"> Initiative by : BUDGE BUDGE INSTITUTE OF TECHNOLOGY </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--/#footer-->
+</section>
+<!--Popup form for support-->
+
+<div class="pop_up_container">
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" style="color: #a7b836;opacity: 1;" data-dismiss="modal" type="button">×</button>
+                    <h4 class="modal-title" style="color:#a7b836;font-family: 'Roboto';font-size: 20px">SWAYAM SUPPORT</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <p style="font-family: 'Roboto';font-size: 20px">Please choose the SWAYAM National Coordinator for support.<span class="text-danger">*</span> :</p>
+                        <select id="nc_email" onchange="display_nc_email()">
+                            <option disabled="" selected="">select</option>
+                            <option value="cecmoocs.nc@gmail.com">CEC</option>
+                            <option value="iimbswayam@iimb.ac.in">IIMB</option>
+                            <option value="swayam.support@ignouonline.ac.in">IGNOU</option>
+                            <option value="nmcncert@ciet.nic.in">NCERT</option>
+                            <option value="SWAYAM@NITTTRC.AC.IN">NITTTR</option>
+                            <option value="swayam@nios.ac.in">NIOS</option>
+                            <option value="aicteswayam@aicte-india.org">AICTE</option>
+                            <option value="support@nptel.iitm.ac.in">NPTEL</option>
+                        </select>
+                        <br> <br>
+                        <p id="nc_email_text" style="font-family: 'Roboto';font-size: 18px;margin-left: -20px;"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.modal-content > .modal-header {
+   background:#003366;
+}
+.modal-dialog {
+    width: 800px;
+}
+@media (max-width: 768px) {
+  .modal-dialog.modal-sm {
+    width: 300px;
+    margin: 30px auto;
+  }
+}
+</style>
+
+<script>
+function email_form(){
+    try{
+        $("#myModal").modal('show');
+    }catch(e){
+        jQuery.noConflict();
+        $("#myModal").modal('show');
+    }
+}
+function display_nc_email(){
+    document.getElementById("nc_email_text").innerHTML = "Please send an email to <b>" + document.getElementById("nc_email").value + "</b> regarding your queries / issues";
+}
+</script>
+<style>
+  .main{
+   position: absolute;
+   bottom: 0px;
+   width: 100%;
+   }
+   @media (max-width: 767px) {
+   body{
+   padding-bottom: 400px;
+   }
+   }
+   @media (min-width: 768px) and (max-width: 991px) {
+   body{
+   padding-bottom: 240px;
+   }
+   }
+   @media (min-width: 992px) {
+   body{
+   padding-bottom: 175px;
+   }
+   }
+
+</style>
+<script>
+$('.carousel').carousel({
+  interval: 5000
+})
+</script>
+
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+  $(".bccontainer").css("padding-top", $('header').outerHeight());
+});
+
+$(document).ready(function() {
+
+  $(".CheckboxContainer .container").click(function(){
+
+      $("input[type='checkbox']").click(function(e){
+
+          $div = $(this).parent();
+          text = $div[0].firstChild.nodeValue;
+          id_text = text.replace(/\s+/g, "");
+          id_text = id_text.replace("&", "_");
+
+          if($(this).prop("checked") == true){
+            $(".sf-filtertags ul").prepend("<li>"+text+"<a href='#' name='"+text+"' id='"+id_text+"' onclick='removeTagAndUncheck(this.id,this.name)'> X </a></li>");
+          }
+          else{
+            $("#"+id_text).parent().remove();
+          }
+
+          clearAllShowHide();
+          e.stopImmediatePropagation();
+        });
+    });
+
+    $('.dropdown-submenu a.submenu').on("click", function(e){
+        $.each($(".dropdown-submenu div.dropdown-menu"), function(){
+            if($(this).is(":visible")) {
+                if( $( "div" ).index( $(this).parent() ) != $( "div" ).index( $(e.target).next('div.dropdown-menu').parent() ) ){
+                    $(this).css("display","none");
+                    $(this).parent().find("i").removeClass("fa-angle-right");
+                    $(this).parent().find("i").addClass("fa-angle-down");
+                }
+            }
+        });
+
+        $(e.target).next('div').toggle();
+
+        if(($(e.target).next('div')).is( ":visible" )){
+            $(e.target).find("i").removeClass("fa-angle-down");
+            $(e.target).find("i").addClass("fa-angle-right");
+        }
+        else{
+            $(e.target).find("i").removeClass("fa-angle-right");
+            $(e.target).find("i").addClass("fa-angle-down");
+        }
+        e.stopPropagation();
+        e.preventDefault();
+    });
+
+    $(".dropdown").on("show.bs.dropdown", function(event){
+        $( event.target).find("div.dropdown-menu").css("display","table") ;
+        $(event.target).find("i").removeClass("fa-angle-right");
+        $(event.target).find("i").addClass("fa-angle-down");
+    });
+    $(".dropdown").on("shown.bs.dropdown", function(){
+        $('.dropdown-submenu a.submenu').next('div').toggle();
+    });
+    $(".dropdown").on("hide.bs.dropdown", function(event){
+        $( event.target).find("div.dropdown-menu").css("display","none") ;
+    });
+});
+
+function clearAllShowHide(){
+  if ( $('.sf-filtertags ul li').length > 2 ) {
+    $("#clearAllTags").css("visibility","visible");
+  }else{
+    $("#clearAllTags").css("visibility","hidden");
+  }
+}
+
+function removeTagAndUncheck(id, name){
+  $("input[name='"+name.trim()+"']:checkbox").prop('checked', false);
+  $("#"+id).parent().remove();
+  clearAllShowHide();
+}
+
+function clearAllTags(){
+  $('.sf-filtertags ul').empty();
+  $('.sf-filtertags ul').prepend('<li id="clearAllTags" style="border:none;visibility: hidden;" onclick="clearAllTags()"><a href="#">Clear All</a></li>');
+  $('input:checkbox').removeAttr('checked');
+  clearAllShowHide();
+}
+
+//Hide Dropdown popover on out-focus
+$(document).on("focusin", function(event){
+    var $trigger = $(".dropdown");
+    if($trigger !== event.target && !$trigger.has(event.target).length){
+        try{
+            $(".dropdown-menu").slideUp("fast");
+        }catch(e){
+            jQuery.noConflict();
+            $(".dropdown-menu").slideUp("fast");
+        }
+    }
+});
+
+$(window).click(function() {
+    try{
+        $(".dropdown-menu").slideUp("fast");
+    }catch(e){
+        jQuery.noConflict();
+        $(".dropdown-menu").slideUp("fast");
+    }
+});
+</script>
+
+<script>
+$('a').click(function(){
+    if($(this).text().trim() == 'Show More' ){
+        $(this).html('Show Less <i class="fa fa-chevron-up"></i>');
+    }
+    else if($(this).text().trim() == 'Show Less' ){
+         $(this).html('Show More <i class="fa fa-chevron-down"></i>');
+    }
+});
+
+</script>
+   
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-46447969-1', 'nptel.ac.in');
+      ga('send', 'pageview');
+    </script>
+    <!---->
+    <div class="gcb-html-hook" id="base-before-body-tag-ends"><!-- base.before_body_tag_ends --></div>
+
+  
+<div style="position: static;"><div class="a2a_overlay" id="a2a_overlay"></div><div id="a2a_modal" class="a2a_modal" role="dialog" tabindex="-1" aria-label="" style="display:none"><div class="a2a_modal_body a2a_menu" id="a2a_copy_link" style="display:none"><span id="a2a_copy_link_icon" class="a2a_svg a2a_s_link" style="background-color:#0166ff"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M24.4 21.18c0-.36-.1-.67-.36-.92l-2.8-2.8a1.24 1.24 0 0 0-.92-.38c-.38 0-.7.14-.97.43.02.04.1.12.25.26l.3.3.2.24c.08.12.14.24.17.35.03.1.05.23.05.37 0 .36-.13.66-.38.92a1.25 1.25 0 0 1-.92.37 1.4 1.4 0 0 1-.37-.03 1.06 1.06 0 0 1-.35-.18 2.27 2.27 0 0 1-.25-.2 6.82 6.82 0 0 1-.3-.3l-.24-.25c-.3.28-.44.6-.44.98 0 .36.13.66.38.92l2.78 2.8c.24.23.54.35.9.35.37 0 .68-.12.93-.35l1.98-1.97c.26-.25.38-.55.38-.9zm-9.46-9.5c0-.37-.13-.67-.38-.92l-2.78-2.8a1.24 1.24 0 0 0-.9-.37c-.36 0-.67.1-.93.35L7.97 9.92c-.26.25-.38.55-.38.9 0 .36.1.67.37.92l2.8 2.8c.24.25.55.37.92.37.36 0 .7-.13.96-.4-.03-.04-.1-.12-.26-.26s-.24-.23-.3-.3a2.67 2.67 0 0 1-.2-.24 1.05 1.05 0 0 1-.17-.35 1.4 1.4 0 0 1-.04-.37c0-.36.1-.66.36-.9.26-.26.56-.4.92-.4.14 0 .26.03.37.06.12.03.23.1.35.17.1.1.2.16.25.2l.3.3.24.26c.3-.28.44-.6.44-.98zM27 21.17c0 1.07-.38 2-1.15 2.73l-1.98 1.98c-.74.75-1.66 1.12-2.73 1.12-1.1 0-2-.38-2.75-1.14l-2.8-2.8c-.74-.74-1.1-1.65-1.1-2.73 0-1.1.38-2.04 1.17-2.82l-1.18-1.17c-.8.8-1.72 1.18-2.82 1.18-1.08 0-2-.36-2.75-1.12l-2.8-2.8C5.38 12.8 5 11.9 5 10.82c0-1.08.38-2 1.15-2.74L8.13 6.1C8.87 5.37 9.78 5 10.86 5c1.1 0 2 .38 2.75 1.15l2.8 2.8c.74.73 1.1 1.65 1.1 2.72 0 1.1-.38 2.05-1.17 2.82l1.18 1.18c.8-.8 1.72-1.2 2.82-1.2 1.08 0 2 .4 2.75 1.14l2.8 2.8c.76.76 1.13 1.68 1.13 2.76z"></path></svg></span><input id="a2a_copy_link_text" type="text" title="Copy link" readonly=""><div id="a2a_copy_link_copied">✓</div></div><div class="a2a_modal_body a2a_menu a2a_thanks" id="a2a_thanks" style="display:none"><div class="a2a_localize" data-a2a-localize="inner,ThanksForSharing">Thanks for sharing!</div></div></div><div class="a2a_menu a2a_full a2a_localize" id="a2apage_full" role="dialog" tabindex="-1" aria-label="Share" data-a2a-localize="title,Share"><div class="a2a_full_header"><div id="a2apage_find_container" class="a2a_menu_find_container"><input id="a2apage_find" class="a2a_menu_find a2a_localize" type="text" autocomplete="off" title="Find any service" data-a2a-localize="title,FindAnyServiceToAddTo"><span id="a2apage_find_icon" class="a2a_svg a2a_s_find"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#CCC" d="M19.7 18.2l-4.5-4.5c.7-1.1 1.2-2.3 1.2-3.6 0-3.5-2.8-6.3-6.3-6.3s-6.3 2.8-6.3 6.3 2.8 6.3 6.3 6.3c1.4 0 2.6-.4 3.6-1.2l4.5 4.5c.6.6 1.3.7 1.7.2.5-.4.4-1.1-.2-1.7zm-9.6-3.6c-2.5 0-4.5-2.1-4.5-4.5 0-2.5 2.1-4.5 4.5-4.5 2.5 0 4.5 2.1 4.5 4.5s-2 4.5-4.5 4.5z"></path></svg></span></div></div><div class="a2a_full_services" id="a2apage_full_services" role="presentation"></div><div class="a2a_full_footer"><a href="https://www.addtoany.com" title="Share Buttons" rel="noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_a2a" style="background-color:#0166ff"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span>AddToAny</a></div></div><div id="a2apage_dropdown" class="a2a_menu a2a_mini a2a_localize" tabindex="-1" aria-label="Share" data-a2a-localize="label,Share" style="display:none"><div id="a2apage_title_container" class="a2a_menu_title_container" style="display:none"><div id="a2apage_title" class="a2a_menu_title"></div></div><div class="a2a_mini_services" id="a2apage_mini_services"></div><div id="a2apage_cols_container" class="a2a_cols_container"><div class="a2a_col1" id="a2apage_col1"></div><div id="a2apage_2_col1" style="display:none"></div><div class="a2a_clear"></div></div><div class="a2apage_wide a2a_wide"><a href="" id="a2apage_show_more_less" class="a2a_menu_show_more_less a2a_more a2a_localize" title="Show all" data-a2a-localize="title,ShowAll"><span class="a2a_svg a2a_s__default a2a_s_a2a" style="background-color:#0166ff"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span><span class="a2a_localize" data-a2a-localize="inner,More">More…</span></a></div></div></div><script src="https://storage.googleapis.com/swayam2-node/assets/lib/google-code-prettify/prettify.js" type="text/javascript" id="https://storage.googleapis.com/swayam2-node/assets/lib/google-code-prettify/prettify.js"></script><script src="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/activity-generic-1.3.js" type="text/javascript" id="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/activity-generic-1.3.js"></script><script src="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/main.js" type="text/javascript" id="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/main.js">
+</script></body>
+</html>

@@ -1,0 +1,1274 @@
+<html lang="en_US" class=""><head><!-- Shady DOM styles for custom-style --><!-- Shady DOM styles for dom-template --><!-- Shady DOM styles for dom-repeat --><!-- Shady DOM styles for array-selector --><!-- Shady DOM styles for dom-if --><!-- Shady DOM styles for iron-request --><!-- Shady DOM styles for iron-ajax --><!-- Shady DOM styles for paper-spinner --><!-- Shady DOM styles for course-card --><style scope="course-card">span.vCenter.course-card {
+    display: table-cell;
+    vertical-align: middle;
+}
+</style>
+<!-- Shady DOM styles for course-cards --><!-- Shady DOM styles for course-card-grouper -->
+<style scope="course-card-grouper">
+course-cards.course-card-grouper {
+    margin-bottom: 32px;
+    position: relative;
+}</style>
+<!-- Shady DOM styles for course-status-selector --><!-- Shady DOM styles for iron-a11y-announcer -->
+<style scope="iron-a11y-announcer">
+iron-a11y-announcer {
+    display: inline-block;
+    position: fixed;
+    clip: rect(0px,0px,0px,0px);
+}</style><!-- Shady DOM styles for iron-meta --><!-- Shady DOM styles for iron-meta-query --><!-- Shady DOM styles for iron-input --><!-- Shady DOM styles for paper-input-char-counter --><!-- Shady DOM styles for paper-input-container --><!-- Shady DOM styles for paper-input-error --><!-- Shady DOM styles for paper-input --><!-- Shady DOM styles for course-category-selector --><!-- Shady DOM styles for course-duration-selector --><!-- Shady DOM styles for filter-sidebar --><!-- Shady DOM styles for paper-material --><!-- Shady DOM styles for paper-ripple --><style scope="paper-ripple">paper-ripple {
+    display: block;
+    position: absolute;
+    border-radius: inherit;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+paper-ripple[animating] {
+    -webkit-transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+#background.paper-ripple, #waves.paper-ripple, .wave-container.paper-ripple, .wave.paper-ripple {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#background.paper-ripple, .wave.paper-ripple {
+    opacity: 0;
+}
+
+#waves.paper-ripple, .wave.paper-ripple {
+    overflow: hidden;
+}
+
+.wave-container.paper-ripple, .wave.paper-ripple {
+    border-radius: 50%;
+}
+
+paper-ripple.circle #background.paper-ripple, paper-ripple.circle #waves.paper-ripple {
+    border-radius: 50%;
+}
+
+paper-ripple.circle .wave-container.paper-ripple {
+    overflow: hidden;
+}
+</style>
+<!-- Shady DOM styles for paper-button --><!-- Shady DOM styles for course-explorer -->
+<style scope="course-explorer">
+#load-more-button.course-explorer {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+paper-spinner.course-explorer {
+    position: relative;
+    top: 11px;
+    left: auto;
+}
+</style>
+<style>
+body {
+    transition: opacity ease-in 0.2s;
+} 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>
+    Accountancy XI Part-I -Course
+    </title>
+
+    <!-- jQuery should be imported first -->
+    <script async="" src="https://static.addtoany.com/menu/svg/icons.29.svg.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.RrjSsKk8Szw.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPwd_oodKkRT_hYRO1I-9xRcQV4oQ/cb=gapi.loaded_0" async=""></script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://storage.googleapis.com/swayam2-node/modules/ajax_registry/assets/js/registry.js"></script>
+  
+  
+    <!-- The following translated strings are used in activity-generic.js and should be
+    declared before that file is imported. -->
+    <script>
+        // inline translations
+        var trans = {};    
+        trans.CHECK_ANSWER_TEXT =
+            " Check Answer ";
+  
+        
+        trans.CHECK_ANSWERS_TEXT =
+            " Check Answers ";
+  
+        
+        trans.SHOW_ANSWER_TEXT =
+            " Skip and Show Answer ";
+  
+        
+        trans.SAVE_ANSWERS_TEXT =
+            " Save Answers ";
+  
+        
+        trans.SAVE_DRAFT_TEXT =
+            " Save Draft ";
+  
+        
+        trans.SUBMIT_ANSWERS_TEXT =
+            " Submit Answers ";
+  
+        
+        trans.SUBMIT_ASSIGNMENT_TEXT =
+            " Submit Assignment ";
+  
+        
+        trans.SUBMIT_REVIEW_TEXT =
+            " Submit Review ";
+  
+        
+        trans.SELECT_ANSWER_PROMPT =
+            " Please click one of the buttons for your answer. ";
+  
+        
+        trans.ALL_CORRECT_TEXT =
+            " All your answers are correct! ";
+  
+        
+        trans.NUM_CORRECT_TEXT =
+            " Number of questions you answered correctly ";
+  
+        
+        trans.YOUR_SCORE_TEXT =
+            " You received a score on this assessment of ";
+  
+        
+        trans.LESSONS_TO_REVIEW_TEXT =
+            " Here are lessons you could review to improve your score ";
+  
+        
+        trans.PERFECT_SCORE_SAVE_TEXT =
+            " Congratulations! Press the \'Submit Answers\' button to submit your grade. ";
+  
+        
+        trans.GENERIC_SAVE_TEXT =
+            " Press the \'Submit Answers\' button below to save your scores. You can also edit your answers above before clicking \'Submit Answers\'. ";
+  
+        
+        trans.SUBMIT_ASSIGNMENT_CONFIRMATION =
+            " Are you sure you want to submit this assignment? ";
+  
+        
+        trans.SUBMIT_REVIEW_CONFIRMATION =
+            " Are you sure you want to submit this review? ";
+  
+        
+        trans.CONFIRMATION_EXPLANATION =
+            " You cannot edit or delete it after you have done so. ";
+      </script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+ 
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/css/nptel.css" rel="stylesheet" type="text/css">
+    <link href="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/css/chosen.min.css" rel="stylesheet" type="text/css">
+    <link href="https://storage.googleapis.com/swayam2-node/assets/css/minimal.mobile.css" rel="stylesheet" type="text/css" media="only screen and (max-device-width: 1024px)">
+    <link href="https://storage.googleapis.com/swayam2-node/assets/css/preview.css" rel="stylesheet" type="text/css">
+  
+    <!-- jQuery should be imported first -->
+    <script src="https://storage.googleapis.com/swayam2-node/static/jquery/jquery.min.js"></script>
+    <script src="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/chosen.jquery.min.js"></script>
+    <script src="https://storage.googleapis.com/swayam2-node/modules/oeditor/_static/js/butterbar.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/swayam2-node/modules/oeditor/_static/css/butterbar.css" media="screen">
+    <script src="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/main.js"></script>
+  
+    <script src="https://www.gstatic.com/charts/loader.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    /* Comment : Accessibility :Alternate text added for an instructor profile photo */
+      $(document).ready(function(){
+          $("img.profilePhoto").attr('alt', 'Instructor profile photo');
+      });
+      function addScript(src, callback) {
+        var r = false;
+        var existed = true;
+        var element = document.getElementById(src);
+        if (!element) {
+          existed = false;
+          element = document.createElement('script');
+          element.src = src;
+          element.type = 'text/javascript';
+          element.setAttribute('id', src);
+        }
+        if (callback != null) {
+          element.onload = element.onreadystatechagne = function() {
+            if (!r && (!this.readyState || this.readyState == 'complete')) {
+              r = true;
+              callback();
+            }
+          }
+        }
+        if (!existed) document.body.appendChild(element);
+      }
+      function getStudentProgress() {
+        
+      }
+      function prettyfyCode() {
+        prettyPrint();
+      }
+      function showButterBar() {
+        
+        var regConfirmationMsg = "Thank you for registering for the course. Click the Announcements tab for important information.";
+        if(window.location.hash == '#registration_confirmation') {
+          cbShowMsg(regConfirmationMsg);
+          setTimeout(function() {cbHideMsg();}, 20000);
+        }
+        
+        var regClosedMsg = "Registrations for this course are not open.";
+        if(window.location.hash == '#registration_closed') {
+          cbShowMsg(regClosedMsg);
+          setTimeout(function() {cbHideMsg();}, 20000);
+        }
+      }
+      function loadOtherJs(callback) {
+        var c = getStudentProgress;
+        if (null != callback) {
+          c = function() {
+             callback();
+             getStudentProgress();
+          }
+        }
+        addScript('https://storage.googleapis.com/swayam2-node/assets/lib/google-code-prettify/prettify.js', prettyfyCode);
+        addScript('https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/activity-generic-1.3.js', null);
+        addScript('https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/main.js', c);
+      }
+      function downloadJsAtLoad() { loadOtherJs(null); }
+      google.charts.load('current', {packages: ['corechart']});
+      google.charts.setOnLoadCallback(downloadJsAtLoad);
+    </script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/loader.js"></script>
+   
+  
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Course",
+        "@id": "https://onlinecourses.swayam2.ac.in/nce20_sc12/",
+        "name": "Accountancy XI Part-I",
+        "description": "",
+        "provider": {
+          "@type":"Organization",
+          "name":"National Council of Educational Research and Training",
+          "sameAs":"http://nptel.iitm.ac.in"
+        },
+        "grantsCredential": "False",
+        "isAccessibleForFree" : "True",
+  
+        "hasCourseInstance" : [
+        {
+          "inLanguage" : "en",
+          "audioLanguage" : ["en"],
+          "startDate" : "2020-10-31T19:30:00.000000Z"
+          }
+        ],
+        
+          "image" : "/modules/nptel/assets/img/nptel-logo.png"
+        
+      }
+    </script>
+  
+  
+      
+  
+      
+  
+      <script>
+        var eventXsrfToken = '';
+        
+  
+        
+          var transientStudent = true;
+        
+      </script>
+  
+      
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js" gapi_processed="true"></script>
+      
+  
+      <script>
+        function gcb_edit_hook_point(key) {
+          window.location=('dashboard?action=edit_html_hook&key=' +
+              encodeURIComponent(key));
+        }
+        $(function() {
+          // TODO(nretallack): This duplicates code in
+          // modules/dashboard/resources/js/view.js.
+          function parseJson(s) {
+            var xssiPrefix = ")]}'";
+            return JSON.parse(s.replace(xssiPrefix, ''));
+          }
+  
+          $("#locale-select").change(function() {
+            var localeSelect = $("#locale-select");
+            var request = JSON.stringify({
+              xsrf_token: localeSelect.data("xsrf-token"),
+              payload: {
+                selected: localeSelect.val()
+              }
+            });
+            $.ajax({
+              url: "rest/locale",
+              type: "POST",
+              data: {request: request},
+              dataType: "text",
+              success: function(data) {
+                data = parseJson(data);
+                if (data.status == 200) {
+                  window.location.reload();
+                }
+              }
+            });
+          });
+        });
+      </script>
+  
+      
+        
+        
+      
+  
+      <style type="text/css">.a2a_menu,.a2a_menu *{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;float:none;margin:0;padding:0;position:static;height:auto;width:auto}.a2a_menu{border-radius:6px;display:none;direction:ltr;background:#FFF;font:16px sans-serif-light,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Arial,Helvetica,"Liberation Sans",sans-serif;color:#000;line-height:12px;border:1px solid #CCC;vertical-align:baseline;overflow:hidden}.a2a_mini{min-width:200px;position:absolute;width:300px;z-index:9999997}.a2a_overlay{display:none;background:#616c7d;_height:expression( ((e=document.documentElement.clientHeight)?e:document.body.clientHeight)+"px" );_width:expression( ((e=document.documentElement.clientWidth)?e:document.body.clientWidth)+"px" );filter:alpha(opacity=90);opacity:.92;backdrop-filter:blur(8px);position:fixed;_position:absolute;top:0;right:0;left:0;bottom:0;z-index:9999998;-webkit-tap-highlight-color:rgba(0,0,0,0);transition:opacity .14s,backdrop-filter .14s}.a2a_full{background:#FFF;border:1px solid #FFF;height:auto;height:calc(320px);top:15%;_top:expression(40+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+"px");left:50%;margin-left:-320px;position:fixed;_position:absolute;text-align:center;width:640px;z-index:9999999;transition:transform .14s,opacity .14s}.a2a_full_footer,.a2a_full_header,.a2a_full_services{border:0;margin:0;padding:12px;box-sizing:border-box}.a2a_full_header{padding-bottom:8px}.a2a_full_services{height:280px;overflow-y:scroll;padding:0 12px;-webkit-overflow-scrolling:touch}.a2a_full_services .a2a_i{display:inline-block;float:none;width:181px;width:calc(33.334% - 18px)}div.a2a_full_footer{font-size:12px;text-align:center;padding:8px 14px}div.a2a_full_footer a,div.a2a_full_footer a:visited{display:inline;font-size:12px;line-height:14px;padding:8px 14px}div.a2a_full_footer a:focus,div.a2a_full_footer a:hover{background:0 0;border:0;color:#0166FF}div.a2a_full_footer a span.a2a_s_a2a,div.a2a_full_footer a span.a2a_w_a2a{background-size:14px;border-radius:3px;display:inline-block;height:14px;line-height:14px;margin:0 3px 0 0;vertical-align:top;*vertical-align:middle;width:14px}.a2a_modal{height:0;left:50%;margin-left:-320px;position:fixed;_position:absolute;text-align:center;top:15%;_top:expression(40+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+"px");width:640px;z-index:9999999;transition:transform .14s,opacity .14s;-webkit-tap-highlight-color:rgba(0,0,0,0)}.a2a_modal_body{background:0 0;border:0;font:24px sans-serif-light,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Arial,Helvetica,"Liberation Sans",sans-serif;position:relative;height:auto;width:auto}.a2a_thanks{color:#fff;height:auto;margin-top:20px;width:auto}.a2a_thanks>div:first-child{margin:0 0 40px 0}.a2a_thanks div *{height:inherit}#a2a_copy_link{background:#FFF;border:1px solid #FFF;margin-top:15%}span.a2a_s_link#a2a_copy_link_icon,span.a2a_w_link#a2a_copy_link_icon{background-size:48px;border-radius:0;display:inline-block;height:48px;left:0;line-height:48px;margin:0 3px 0 0;position:absolute;vertical-align:top;*vertical-align:middle;width:48px}#a2a_modal input#a2a_copy_link_text{background-color:transparent;_background-color:#FFF;border:0;color:#2A2A2A;font:inherit;height:48px;left:62px;max-width:initial;padding:0;position:relative;width:564px;width:calc(100% - 76px)}#a2a_copy_link_copied{background-color:#0166ff;color:#fff;display:none;font:inherit;font-size:16px;margin-top:1px;padding:3px 8px}@media (prefers-color-scheme:dark){.a2a_menu a,.a2a_menu a.a2a_i,.a2a_menu a.a2a_i:visited,.a2a_menu a.a2a_more,i.a2a_i{border-color:#2a2a2a!important;color:#fff!important}.a2a_menu a.a2a_i:active,.a2a_menu a.a2a_i:focus,.a2a_menu a.a2a_i:hover,.a2a_menu a.a2a_more:active,.a2a_menu a.a2a_more:focus,.a2a_menu a.a2a_more:hover,.a2a_menu_find_container{border-color:#444!important;background-color:#444!important}.a2a_menu{background-color:#2a2a2a;border-color:#2a2a2a}.a2a_menu_find{color:#fff!important}.a2a_menu span.a2a_s_find svg{background-color:transparent!important}.a2a_menu span.a2a_s_find svg path{fill:#fff!important}}@media print{.a2a_floating_style,.a2a_menu,.a2a_overlay{visibility:hidden}}@keyframes a2aFadeIn{from{opacity:0}to{opacity:1}}.a2a_starting{opacity:0}.a2a_starting.a2a_full,.a2a_starting.a2a_modal{transform:scale(.8)}@media (max-width:639px){.a2a_full{border-radius:0;top:15%;left:0;margin-left:auto;width:100%}.a2a_modal{left:0;margin-left:10px;width:calc(100% - 20px)}}@media (min-width:318px) and (max-width:437px){.a2a_full .a2a_full_services .a2a_i{width:calc(50% - 18px)}}@media (max-width:317px){.a2a_full .a2a_full_services .a2a_i{width:calc(100% - 18px)}}@media (max-height:436px){.a2a_full{bottom:40px;height:auto;top:40px}}@media (max-height:550px){.a2a_modal{top:30px}}@media (max-height:360px){.a2a_modal{top:20px}.a2a_thanks>div:first-child{margin-bottom:20px}}.a2a_menu a{color:#0166FF;text-decoration:none;font:16px sans-serif-light,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Arial,Helvetica,"Liberation Sans",sans-serif;line-height:14px;height:auto;width:auto;outline:0}.a2a_menu a.a2a_i:visited,.a2a_menu a.a2a_more{color:#0166FF}.a2a_menu a.a2a_i:active,.a2a_menu a.a2a_i:focus,.a2a_menu a.a2a_i:hover,.a2a_menu a.a2a_more:active,.a2a_menu a.a2a_more:focus,.a2a_menu a.a2a_more:hover{color:#2A2A2A;border-color:#EEE;border-style:solid;background-color:#EEE;text-decoration:none}.a2a_menu span.a2a_s_find{background-size:24px;height:24px;left:8px;position:absolute;top:7px;width:24px}.a2a_menu span.a2a_s_find svg{background-color:#FFF}.a2a_menu span.a2a_s_find svg path{fill:#CCC}#a2a_menu_container{display:inline-block}#a2a_menu_container{_display:inline}.a2a_menu_find_container{border:1px solid #CCC;border-radius:6px;padding:2px 24px 2px 0;position:relative;text-align:left}.a2a_cols_container .a2a_col1{overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch}#a2a_modal input,#a2a_modal input[type=text],.a2a_menu input,.a2a_menu input[type=text]{display:block;background-image:none;box-shadow:none;line-height:100%;margin:0;outline:0;overflow:hidden;padding:0;-moz-box-shadow:none;-webkit-box-shadow:none;-webkit-appearance:none}#a2apage_find_container input,#a2apage_find_container input[type=text]{background-color:transparent;_background-color:#FFF;border:0;box-sizing:content-box;color:#2A2A2A;font:inherit;font-size:16px;height:28px;line-height:20px;left:38px;outline:0;margin:0;max-width:initial;padding:2px 0;position:relative;width:99%}.a2a_clear{clear:both} .a2a_svg{background-repeat:no-repeat;display:block;overflow:hidden;height:32px;line-height:32px;padding:0;width:32px}.a2a_svg svg{background-repeat:no-repeat;background-position:50% 50%;border:none;display:block;left:0;margin:0 auto;overflow:hidden;padding:0;position:relative;top:0;width:auto;height:auto}a.a2a_i,i.a2a_i{display:block;float:left;border:1px solid #FFF;line-height:24px;padding:6px 8px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:132px}a.a2a_i span,a.a2a_more span{display:inline-block;overflow:hidden;vertical-align:top;*vertical-align:middle}a.a2a_i .a2a_svg{margin:0 6px 0 0}a.a2a_i .a2a_svg,a.a2a_more .a2a_svg{background-size:24px;height:24px;line-height:24px;width:24px}a.a2a_sss:hover{border-left:1px solid #CCC}a.a2a_menu_show_more_less{border-bottom:1px solid #FFF;border-left:0;border-right:0;line-height:24px;margin:6px 0 0;padding:6px;-webkit-touch-callout:none}a.a2a_menu_show_more_less span{display:inline-block;height:24px;margin:0 6px 0 0}.a2a_kit .a2a_svg{background-repeat:repeat}.a2a_default_style a{float:left;line-height:16px;padding:0 2px}.a2a_default_style a:hover .a2a_svg,.a2a_floating_style a:hover .a2a_svg,.a2a_overlay_style a:hover .a2a_svg svg{opacity:.7}.a2a_overlay_style.a2a_default_style a:hover .a2a_svg{opacity:1}.a2a_default_style .a2a_count,.a2a_default_style .a2a_svg,.a2a_floating_style .a2a_svg,.a2a_menu .a2a_svg,.a2a_vertical_style .a2a_count,.a2a_vertical_style .a2a_svg{border-radius:4px}.a2a_default_style .a2a_counter img,.a2a_default_style .a2a_dd,.a2a_default_style .a2a_svg{float:left}.a2a_default_style .a2a_img_text{margin-right:4px}.a2a_default_style .a2a_divider{border-left:1px solid #000;display:inline;float:left;height:16px;line-height:16px;margin:0 5px}.a2a_kit a{cursor:pointer}.a2a_floating_style{background-color:#fff;border-radius:6px;position:fixed;z-index:9999995}.a2a_overlay_style{z-index:2147483647}.a2a_floating_style,.a2a_overlay_style{animation:a2aFadeIn .2s ease-in;padding:4px}.a2a_vertical_style a{clear:left;display:block;overflow:hidden;padding:4px;text-decoration:none}.a2a_floating_style.a2a_default_style{bottom:0}.a2a_floating_style.a2a_default_style a,.a2a_overlay_style.a2a_default_style a{padding:4px}.a2a_count{background-color:#fff;border:1px solid #ccc;box-sizing:border-box;color:#2a2a2a;display:block;float:left;font:12px Arial,Helvetica,sans-serif;height:16px;margin-left:4px;position:relative;text-align:center;width:50px}.a2a_count:after,.a2a_count:before{border:solid transparent;border-width:4px 4px 4px 0;content:"";height:0;left:0;line-height:0;margin:-4px 0 0 -4px;position:absolute;top:50%;width:0}.a2a_count:before{border-right-color:#ccc}.a2a_count:after{border-right-color:#fff;margin-left:-3px}.a2a_count span{animation:a2aFadeIn .14s ease-in}.a2a_vertical_style .a2a_counter img{display:block}.a2a_vertical_style .a2a_count{float:none;margin-left:0;margin-top:6px}.a2a_vertical_style .a2a_count:after,.a2a_vertical_style .a2a_count:before{border:solid transparent;border-width:0 4px 4px 4px;content:"";height:0;left:50%;line-height:0;margin:-4px 0 0 -4px;position:absolute;top:0;width:0}.a2a_vertical_style .a2a_count:before{border-bottom-color:#ccc}.a2a_vertical_style .a2a_count:after{border-bottom-color:#fff;margin-top:-3px}.a2a_nowrap{white-space:nowrap}.a2a_note{margin:0 auto;padding:9px;font-size:12px;text-align:center}.a2a_note .a2a_note_note{margin:0;color:#2A2A2A}.a2a_wide a{display:block;margin-top:3px;border-top:1px solid #EEE;text-align:center}.a2a_label{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:polygon(0 0,0 0,0 0);-webkit-clip-path:polygon(0 0,0 0,0 0);overflow:hidden;height:1px;width:1px}.a2a_kit,.a2a_menu,.a2a_modal,.a2a_overlay{-ms-touch-action:manipulation;touch-action:manipulation;outline:0}.a2a_dd img{border:0}.a2a_button_facebook_like iframe{max-width:none}</style><link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/core/tooltip.css"><link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/49/css/util/util.css"><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_default_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_graphics_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_ui_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/49/js/jsapi_compiled_corechart_module.js"></script></head><body data-gcb-page-locale="en_US" class="homepage" style="" cz-shortcut-listen="true"><div class="gcb-html-hook" id="base-before-head-tag-ends"><!-- base.before_head_tag_ends --></div>
+    
+  
+    
+      <div class="invisiblePopupDiv" id="termsDiv">
+         <div class="gcb-pull-right">
+         <a class="closeXButton" onclick="hidePopupDiv(&quot;termsDiv&quot;); return false;" style="margin-left: 10px">X</a>
+         </div>
+         <iframe src="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/html/terms.html" class="popupIframe"></iframe>
+        </div>
+      <div class="invisiblePopupDiv" id="honorDiv">
+         <div class="gcb-pull-right">
+         <a class="closeXButton" onclick="hidePopupDiv(&quot;honorDiv&quot;); return false;" style="margin-left: 10px">X</a>
+         </div>
+         <iframe src="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/html/honor_code.html" class="popupIframe"></iframe>
+        </div>
+      <div class="invisiblePopupDiv" id="faqDiv">
+         <div class="gcb-pull-right">
+         <a class="closeXButton" onclick="hidePopupDiv(&quot;faqDiv&quot;); return false;" style="margin-left: 10px">X</a>
+         </div>
+         <iframe src="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/html/faq.html" class="popupIframe"></iframe>
+      </div>
+  
+      <div class="gcb-html-hook" id="base-after-body-tag-begins"><!-- base.after_body_tag_begins --></div>
+  
+      
+        <script>
+          dataLayer = [{
+            'course_title': 'Accountancy XI Part-I',
+            'event': 'default',  // Explicit value meaning not-really-set.
+            }];
+  
+          function gcbSetPageInfo(dict) {
+            dataLayer.push(dict);
+          }
+  
+          // Invoke page-specific block so that any calls to gcbReportPageInfo()
+          // are made before we hit the Tag Manager call, below.
+          
+    if ('gcbSetPageInfo' in window) {
+      gcbSetPageInfo({
+        'page_type': 'preview',
+      });
+    }
+  
+        </script>
+  
+        
+      
+  
+      <!-- ButterBar -->
+      <div class="gcb-butterbar-container">
+        <div id="gcb-butterbar-top" class="gcb-butterbar" style="margin-top:50px" aria-live="polite">
+          <p id="gcb-butterbar-message"></p>
+          <a id="gcb-butterbar-close">X</a>
+        </div>
+      </div>
+  
+      <!-- header starts-->
+      
+  
+  
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- CoursePlus CSS -->
+      <link href="https://storage.googleapis.com/swayam2-node/assets/css/swayam_css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://storage.googleapis.com/swayam2-node/assets/css/swayam_css/main.css" rel="stylesheet">
+      <link href="https://storage.googleapis.com/swayam2-node/assets/css/swayam_css/home_page.css" rel="stylesheet">
+      <link rel="icon" href="https://storage.googleapis.com/swayam2-node/assets/img/favicon.ico">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- CoursePlus JS -->
+      <script src="https://storage.googleapis.com/swayam2-node/assets/js/swayam_js/jquery.js"></script>
+      <script src="https://storage.googleapis.com/swayam2-node/assets/js/swayam_js/bootstrap.min.js"></script>
+      <script src="https://storage.googleapis.com/swayam2-node/static/polymer-1.2.0/webcomponentsjs/webcomponents-lite.js"></script>
+      
+      <style>
+    /* IE 10 support for HTML5 hidden attr */
+    [hidden] {
+      display: none !important;
+    }
+  </style><style></style><style></style><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700"><style></style><style></style><style></style><link rel="import" href="/modules/explorer/_static/components/course-explorer/course-explorer.html">
+      <style>
+          .top-navigation {
+              margin-bottom: 10px;
+          }
+  
+          .top-navigation a {
+              padding: 15px 4px;
+          }
+  
+          .introTitle {
+              opacity: 0.6;
+              font-family: Roboto;
+              font-family: Roboto;
+              font-size: 14px;
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              letter-spacing: normal;
+              color: #000000;
+          }
+  
+          .welcomeTitle {
+              font-size: 24px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.5;
+              letter-spacing: normal;
+              color: #44688e;
+          }
+  
+          ul.dropdown-menu {
+              margin-top: 14px;
+              padding-top: 0;
+              text-align: left;
+              left: -25px;
+              width: 240px;
+              overflow: auto;
+          }
+  
+          table td {
+              font-size: 16px;
+          }
+  
+          table img {
+              max-height: 100px;
+              max-width: 100px;
+          }
+  
+          a {
+              color: blue;
+              text-decoration: none;
+          }
+      </style>
+  
+  
+  <header id="header" role="banner">
+      <!--Top Bar [START]-->
+      <div class="top-bar">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-3 col-xs-12 top-left">
+                      <a class="navbar-brand" href="main.html">
+                        <img src="https://scontent.fccu3-1.fna.fbcdn.net/v/t1.0-9/164072082_1379326135752823_5891110949319784736_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=730e14&_nc_ohc=vQC5z1s-BMQAX-__Ttv&_nc_ht=scontent.fccu3-1.fna&oh=5e57bbae44c9bd94b857f48a2e35d909&oe=6080C131"
+                        alt="CoursePlus-logo">
+                      </a>
+                      &nbsp; &nbsp; &nbsp;
+                  </div>
+                  <div class="col-sm-9 col-xs-12">
+                      <div class="top-navigation">
+                          <a href="about.html">About CoursePlus</a> |
+                          <a href="all.html">All Courses</a> |
+                          <div class="dropdown" style="display: inline-block;">
+                              
+                                  <a href="login_signup.html" style="padding-top:0px;">
+                                      <button type="submit" name="submit" class="btn btn-primary btn-lg" style="margin: 0px;">
+                                          Sign-In / Register
+                                      </button>
+                                  </a>
+                              
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+  <script>
+      function showAllCourses(node_code) {
+          if (node_code === "nd1") {
+              if (window.location.pathname === "/") {
+                  const {top} = $('.explore-courses').offset();
+                  window.scrollTo(0, top - 100);
+              } else {
+                  window.location.href = "/";
+              }
+          }else{
+              window.location.href = "https://swayam.gov.in/explorer";
+          }
+      }
+  
+  </script>
+      <!-- header ends -->
+  
+      
+      
+  
+      
+    <!--12 Col Container [START]-->
+  <div class="previewCourseBox">
+  <div class="bccontainer boxMarginBottom" style="padding-bottom: 8px; padding-top: 62px;"></div>
+  
+    <!-- nav bar -->
+      <div class="container breadcrumb">
+        <a href="all.html">Courses</a><span> &gt;</span>
+      </div>
+  
+    <div class="container" style="color:#28293d;">
+      <h1 class="courseTitle">Accountancy XI Part-I</h1>
+      <div class="instructorName">
+          By Prof. Shipra Vaidya &nbsp; | &nbsp;
+          DESS, NCERT, New Delhi
+      </div>
+  
+      <div style="display: inline-block;">
+          
+            
+    <div>
+        <a href="login_signup.html" id="register-button">
+          <button class="btn btn-primary btn-lg joinCourse">
+            
+            Join
+          </button>
+        </a>
+    </div>
+  
+          
+      </div>
+      <div style="display: inline-block;">
+            
+              <div class="learnerEnrolled">Learners enrolled: 2929</div>
+            
+      </div>
+    </div>
+  </div>
+  <!--12 Col Container [END]-->
+    <div class="gcb-html-hook" id="preview-after-top-content-ends"></div>
+  
+  
+      <div>
+          <div class="is-wrapper">
+            <div>
+  
+              <div class="gcb-html-hook" id="base-after-top-content-ends"><!-- base.after_top_content_ends --></div>
+  
+              <!-- main section -->
+              
+    <!--9 Col + 3 Col Container [START] -->
+  <div style="background-color: #fafafc;">
+  <div class="container">
+    <div class="row marginTop25">
+      <!--9 col [start]-->
+      <div class="col-md-7 col-xs-12">
+  
+        <div class="marginTop20">
+        
+            <iframe width="100%" height="320" src="https://www.youtube.com/embed/b0LxvxRZRp0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+            </iframe>
+        
+        </div>
+  
+        <div class="marginTop25 previewContent"><div class="yui-wk-div" style="text-align: justify;"><div class="yui-wk-div"><span class="yui-tag-span yui-tag" style="font-size: 14px;" tag="span">An important part of any business organisation is the money that comes in and the money that goes out. Every bit of monetary inflow and outflow needs to be tracked and accounted for.</span></div><div class="yui-wk-div"><span class="yui-tag-span yui-tag" style="font-size: 14px;" tag="span">This course is intended to develop understanding:</span></div><div class="yui-wk-div" style="text-align: start;"><ol><li style="text-align: justify;"><span class="yui-tag-span yui-tag" style="font-size: 14px;" tag="span">Systematically recording the accounting transactions, accountants determine the profitability of a business, perform financial forecasts and assess the overall performance of a business enterprise.&nbsp;</span></li><li style="text-align: justify;"><span class="yui-tag-span yui-tag" style="font-size: 14px;" tag="span">How can the credibility and usefulness of accounting and financial information be ensured? Or Why accounting and finance are the key elements for a business entity?&nbsp;</span></li><li style="text-align: justify;"><span class="yui-tag-span yui-tag" style="font-size: 14px;" tag="span">To understand how accounting operates through Generally Accepted Accounting Principles, accounting standards and structured rules and procedures,&nbsp;</span></li></ol></div><div class="yui-wk-div"><span class="yui-tag-span yui-tag" style="font-size: 14px;" tag="span">This course will help the aspiring accountants, like you, to strengthen the conceptual base in accounting through variety of e-resources like video lectures, enrichment materials for supplementing textbooks, self assessment inventory and checklist, external weblinks and many more activities for smooth progression and joyful learning.</span></div></div></div>
+  
+      </div>
+      <!--3 col [start]-->
+      <div class="col-md-4 col-md-offset-1 col-xs-12 marginTop20">
+        <div class="previewTitle">Summary</div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="previewContent marginTop20">
+          <tbody><tr>
+            <td nowrap="nowrap">Course Status :</td>
+            
+                <td>Upcoming</td>
+            
+            
+          </tr>
+          <tr>
+            <td>Course Type :</td>
+            
+                <td>Core</td>
+            
+          </tr>
+          <tr>
+            <td>Duration :</td>
+            
+                <td>24 weeks</td>
+            
+          </tr>
+          <tr>
+            <td>Start Date :</td>
+            
+                <td>01 Nov 2020</td>
+            
+          </tr>
+          <tr>
+            <td>End Date :</td>
+            
+                <td>11 Apr 2021</td>
+            
+          </tr>
+          <tr>
+            <td>Exam Date :</td>
+            
+                <td>04 Apr 2021</td>
+            
+          </tr>
+          
+          <tr>
+            <td>Enrollment Ends :</td>
+            <td>31 Mar 2021</td>
+          </tr>
+          <tr>
+            <td style="height: 40px; vertical-align: initial;">Category :</td>
+            <td>
+              <!---->
+              <ul style="margin-left: 18px;">
+              <li class="summary_category">School</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Level :</td>
+            <td>School</td>
+          </tr>
+        </tbody></table>
+        
+        <br>
+        <!--Social media sharing implementation BEGIN -->
+        <!-- AddToAny BEGIN -->
+          <style type="text/css">
+          .a2a_menu, .a2a_menu_find_container { border-radius: 0 !important; }
+          .a2a_svg { height: 40px; width: 40px; }
+          /* Accessibility color contrast fixes in 'a2a_label' class */
+          .a2a_label, .a2a_label:hover { background-color: #1F1F1F !important }
+          </style>
+  
+          <div class="a2a_kit a2a_kit_size_32 a2a_default_style marginTop20" style="line-height: 32px;">
+          <a class="a2a_button_facebook" target="_blank" href="/#facebook" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_facebook" style="background-color: rgb(24, 119, 242);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M17.78 27.5V17.008h3.522l.527-4.09h-4.05v-2.61c0-1.182.33-1.99 2.023-1.99h2.166V4.66c-.375-.05-1.66-.16-3.155-.16-3.123 0-5.26 1.905-5.26 5.405v3.016h-3.53v4.09h3.53V27.5h4.223z"></path></svg></span><span class="a2a_label">Facebook</span></a>
+          <a class="a2a_button_twitter" target="_blank" href="/#twitter" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_twitter" style="background-color: rgb(85, 172, 238);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M28 8.557a9.913 9.913 0 0 1-2.828.775 4.93 4.93 0 0 0 2.166-2.725 9.738 9.738 0 0 1-3.13 1.194 4.92 4.92 0 0 0-3.593-1.55 4.924 4.924 0 0 0-4.794 6.049c-4.09-.21-7.72-2.17-10.15-5.15a4.942 4.942 0 0 0-.665 2.477c0 1.71.87 3.214 2.19 4.1a4.968 4.968 0 0 1-2.23-.616v.06c0 2.39 1.7 4.38 3.952 4.83-.414.115-.85.174-1.297.174-.318 0-.626-.03-.928-.086a4.935 4.935 0 0 0 4.6 3.42 9.893 9.893 0 0 1-6.114 2.107c-.398 0-.79-.023-1.175-.068a13.953 13.953 0 0 0 7.55 2.213c9.056 0 14.01-7.507 14.01-14.013 0-.213-.005-.426-.015-.637.96-.695 1.795-1.56 2.455-2.55z"></path></svg></span><span class="a2a_label">Twitter</span></a>
+          <a class="a2a_button_email" target="_blank" href="/#email" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_email" style="background-color: rgb(1, 102, 255);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M26 21.25v-9s-9.1 6.35-9.984 6.68C15.144 18.616 6 12.25 6 12.25v9c0 1.25.266 1.5 1.5 1.5h17c1.266 0 1.5-.22 1.5-1.5zm-.015-10.765c0-.91-.265-1.235-1.485-1.235h-17c-1.255 0-1.5.39-1.5 1.3l.015.14s9.035 6.22 10 6.56c1.02-.395 9.985-6.7 9.985-6.7l-.015-.065z"></path></svg></span><span class="a2a_label">Email</span></a>
+          <a class="a2a_button_linkedin" target="_blank" href="/#linkedin" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_linkedin" style="background-color: rgb(0, 123, 181);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M6.227 12.61h4.19v13.48h-4.19V12.61zm2.095-6.7a2.43 2.43 0 0 1 0 4.86c-1.344 0-2.428-1.09-2.428-2.43s1.084-2.43 2.428-2.43m4.72 6.7h4.02v1.84h.058c.56-1.058 1.927-2.176 3.965-2.176 4.238 0 5.02 2.792 5.02 6.42v7.395h-4.183v-6.56c0-1.564-.03-3.574-2.178-3.574-2.18 0-2.514 1.7-2.514 3.46v6.668h-4.187V12.61z" fill="#FFF"></path></svg></span><span class="a2a_label">LinkedIn</span></a>
+          <a class="a2a_button_whatsapp" target="_blank" href="/#whatsapp" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_whatsapp" style="background-color: rgb(18, 175, 10);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFF" d="M16.21 4.41C9.973 4.41 4.917 9.465 4.917 15.7c0 2.134.592 4.13 1.62 5.832L4.5 27.59l6.25-2.002a11.241 11.241 0 0 0 5.46 1.404c6.234 0 11.29-5.055 11.29-11.29 0-6.237-5.056-11.292-11.29-11.292zm0 20.69c-1.91 0-3.69-.57-5.173-1.553l-3.61 1.156 1.173-3.49a9.345 9.345 0 0 1-1.79-5.512c0-5.18 4.217-9.4 9.4-9.4 5.183 0 9.397 4.22 9.397 9.4 0 5.188-4.214 9.4-9.398 9.4zm5.293-6.832c-.284-.155-1.673-.906-1.934-1.012-.265-.106-.455-.16-.658.12s-.78.91-.954 1.096c-.176.186-.345.203-.628.048-.282-.154-1.2-.494-2.264-1.517-.83-.795-1.373-1.76-1.53-2.055-.158-.295 0-.445.15-.584.134-.124.3-.326.45-.488.15-.163.203-.28.306-.47.104-.19.06-.36-.005-.506-.066-.147-.59-1.587-.81-2.173-.218-.586-.46-.498-.63-.505-.168-.007-.358-.038-.55-.045-.19-.007-.51.054-.78.332-.277.274-1.05.943-1.1 2.362-.055 1.418.926 2.826 1.064 3.023.137.2 1.874 3.272 4.76 4.537 2.888 1.264 2.9.878 3.43.85.53-.027 1.734-.633 2-1.297.266-.664.287-1.24.22-1.363-.07-.123-.26-.203-.54-.357z"></path></svg></span><span class="a2a_label">WhatsApp</span></a>
+          <a class="a2a_dd" href="https://www.addtoany.com/share#url=https%3A%2F%2Fonlinecourses.swayam2.ac.in%2Fnce20_sc12%2Fpreview&amp;title=Accountancy%20XI%20Part-I%20-%20Course"><span class="a2a_svg a2a_s__default a2a_s_a2a" style="background-color: rgb(1, 102, 255);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span><span class="a2a_label a2a_localize" data-a2a-localize="inner,Share">Share</span></a>
+          <div style="clear: both;"></div></div>
+          <script>
+          var a2a_config = a2a_config || {};
+          a2a_config.num_services = 0;  // No of services set to 0 in mini AddToAny menu
+          a2a_config.onclick = 2; // Jump to main AddToAny menu
+          // Excluded as to avoid repeatation of platforms
+          a2a_config.exclude_services = ["facebook", "twitter", "linkedin", "email", "whatsapp"];
+          </script>
+          <script type="text/javascript" async="" src="//static.addtoany.com/menu/page.js"></script>
+        <!-- AddToAny END -->
+        <!--Social media sharing implementation END-->
+      </div>
+      <!--3 col [End]-->
+    </div>
+  </div>
+  <br><br>
+  </div>
+  <!--9 Col + 3 Col Container [END] -->
+  <div class="container">
+    
+    <div class="row marginTop25">
+      <div class="col-md-7 col-xs-12">
+        <h3 class="courseTitle">Course layout</h3>
+        <div class="previewContent marginTop20"><table width="665" cellpadding="4" cellspacing="0">
+      <colgroup><col width="74">
+      <col width="573">
+      </colgroup><tbody><tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt;"><b style="font-size: 13px; font-family: Arial;">Week</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Module</b></font></p>
+          </td>
+      </tr>
+      
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              1</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left" style="margin-bottom: 0cm"><font style="font-size: 13px; font-family: Arial;">Introduction
+              to Accounting (keac_10101)</font></p>
+              <p class="western" align="left"><font style="font-size: 13px; font-family: Arial;">Qualitative
+              characteristics of accounting information (keac_10102)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              2</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left" style="margin-bottom: 0cm"><font style="font-size: 13px; font-family: Arial;">Process
+              of accounting  (keac_10103)</font></p>
+              <p class="western" align="left"><font style="font-size: 13px; font-family: Arial;">Debtors,
+              Creditors, Goods, Cost, Gain, Stock (keac_10104)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              3</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left"><font style="font-size: 13px; font-family: Arial;">Assignment</font><font style="font-size: 12px; font-family: Arial;"> Chapter 1</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              4</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western"><font style="font-size: 13px; font-family: Arial;">Theory
+              Base of Accounting (keac_10201)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              5</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western"><font style="font-size: 13px; font-family: Arial;">System
+              of Accounting (keac_10202)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              6</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left"><font style="font-size: 13px; font-family: Arial;">Assignment</font><span class="yui-tag-span yui-tag" tag="span" style="font-size: 12px; font-family: Arial;"><span style="line-height: 15.86px;">&nbsp;</span><span style="line-height: 15.86px;">Chapter 2</span></span></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              7</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left"><font style="font-size: 13px; font-family: Arial;">Accounting
+              Vouchers (keac_10301)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              8</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left"><font style="font-size: 13px; font-family: Arial;">Accounting
+              Equation (keac_10302)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              9</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left"><font style="font-size: 13px; font-family: Arial;">Rules
+              of Debit and Credit (keac_10303)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              10</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left"><font style="font-size: 13px; font-family: Arial;">Books
+              of Original Entry: Journal (keac_10304)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              11</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left"><font style="font-size: 13px; font-family: Arial;">Special
+              Purpose Books: Cash Book (keac_10305)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              12</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left"><font style="font-size: 13px; font-family: Arial;">Special
+              Purpose Books: Purchases book, Sales book, Purchases Return book,
+              Sales Return book, Journal Proper (keac_10306)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              13</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western"><font style="font-size: 13px; font-family: Arial;">Ledger:
+              Format; Posting from journal and subsidiary books; Balancing of
+              accounts (keac_10307)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" height="19" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              14</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left"><font style="font-size: 13px; font-family: Arial;">Bank
+              Reconciliation Statement: Concept Preparation, Ascertaining the
+              correct cash balance (keac_10308)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              15</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left"><font style="font-size: 13px; font-family: Arial;">Assignment</font><span class="yui-tag-span yui-tag" tag="span" style="font-size: 12px; font-family: Arial;"><span style="line-height: 15.86px;">&nbsp;</span><span style="line-height: 15.86px;">Chapter 3</span></span></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              16</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western"><font style="font-size: 13px; font-family: Arial;">Trial
+              Balance and Rectification of Errors (keac_10401)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              17</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left"><font style="font-size: 13px; font-family: Arial;">Rectification
+              of Errors (continued) (keac_10402)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              18</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left"><font style="font-size: 13px; font-family: Arial;">Assignment</font><span class="yui-tag-span yui-tag" tag="span" style="font-size: 12px; font-family: Arial;"><span style="line-height: 15.86px;">&nbsp;</span><span style="line-height: 15.86px;">Chapter 4</span></span></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              19</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left"><font style="font-size: 13px; font-family: Arial;">Depreciation,
+              Provisions &amp; Reserves (keac_10501)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              20</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western"><font style="font-size: 13px; font-family: Arial;">Provisions
+              and Reserve (keac_10502)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              21</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left" style="font-weight: normal"><font style="font-size: 13px; font-family: Arial;">Bills
+              of Exchange – I (keac_10601)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              22</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left" style="font-weight: normal"><font style="font-size: 13px; font-family: Arial;">Bills
+              of Exchange – II (keac_10601)</font></p>
+          </td>
+      </tr>
+      <tr valign="top">
+          <td width="74" bgcolor="#ffffff" style="border-top: 1px solid #000001; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0cm">
+              <p class="western" align="center"><font size="2" style="font-size: 10pt"><b style="font-size: 13px; font-family: Arial;">Week
+              23</b></font></p>
+          </td>
+          <td width="573" bgcolor="#ffffff" style="border: 1px solid #000001; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.09cm; padding-right: 0.1cm">
+              <p class="western" align="left" style="font-weight: normal"><font style="font-size: 13px;"><span style="font-family: Arial;">Assignment</span><span style="line-height: 15.86px;"><span style="font-family: Arial;">&nbsp;</span><span class="yui-tag-span yui-tag" tag="span" style="font-size: 12px;">Chapter 5 &amp; 6</span></span><br><span style="font-family: Arial;">Feedback and Discussion</span></font></p></td></tr></tbody></table></div>
+      </div>
+    </div>
+    
+    
+    <div class="row marginTop25">
+      <div class="col-md-7 col-xs-12">
+        <h3 class="courseTitle">Books and references</h3>
+        <div class="previewContent marginTop20"><div class="yui-wk-div"><span class="yui-tag-span yui-tag" tag="span" style="color: #000000; font-size: 14px;">NCERT "Financial Accounting-I" for Class - XI</span></div><div class="yui-wk-div"><span class="yui-tag-span yui-tag" tag="span" style="font-size: 14px;"><span class="yui-tag-span yui-tag" tag="span" style="color: rgb(17, 17, 17); font-size: 14px;">url:- <a>https://ncert.nic.in/textbook/textbook.php?keac1=0-8</a>&nbsp;<br></span></span><br></div></div>
+      </div>
+    </div>
+    
+    
+    <div class="row marginTop25">
+      <div class="col-md-7 col-xs-12">
+        <h3 class="courseTitle">Instructor bio</h3>
+        <div class="previewContent marginTop20"><div id="instructor_i_1080" class="row"><div class="col-md-3 col-sm-3 col-xs-12 text-center"><img id="i_1080" class="profilePhoto" src="https://storage.googleapis.com/swayam-central-production.appspot.com/instructor/assets/i_1080.png" width="128" height="128" style="border-radius: 50%;" alt="Instructor profile photo"><h3 class="profileName" style="text-transform:capitalize">Prof. Shipra Vaidya</h3><span class="profileCollege" style="text-transform:capitalize; font-size: 14px">DESS, NCERT, New Delhi</span></div><div class="col-md-9 col-sm-9 col-xs-12"><div style="text-align: justify;"><span class="yui-tag-span yui-tag" tag="span" style="font-size: 13px; font-family: Arial; color: rgb(0, 0, 10);">Professor Shipra Vaidya is in faculty of Commerce in Department of Education in Social Sciences, NCERT, New Delhi. Her area of specialisation includes Accouting, Business Studies Computerised Accounting System. She is a member coordinator for NCERT's Commerce Curriculum and Textbooks at the higher secondary stage.</span></div></div></div></div>
+      </div>
+    </div>
+    
+    
+    <div class="row marginTop25">
+      <div class="col-md-7 col-xs-12">
+        <h3 class="courseTitle">Course certificate</h3>
+        <div class="previewContent marginTop20"><span class="yui-tag-span yui-tag" tag="span" style="color: #000000; font-size: 14px;">The participants will get participation / completion certificate.<br><br></span></div>
+      </div>
+    </div>
+    
+  
+    <br><br>
+  
+  </div>
+    <div class="gcb-html-hook" id="preview-after-main-content-ends"></div>
+  
+              <div class="gcb-html-hook" id="base-after-main-content-ends"><!-- base.after_main_content_ends --></div>
+            </div>
+          </div>
+      </div>
+  
+      
+  
+  
+  
+  
+      <!-- footer section -->
+      <section class="main">
+  <section id="social">
+    <!-- Comment : Accessibility :Alternate text added for all img tags in footer -->
+    <div class="container">
+  
+        <div class="row appcontainer">
+          <!--<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" style="padding-top:12px"> <img src="https://storage.googleapis.com/swayam2-node/assets/img/swayam_images/social_GOI.jpg" /> </div>-->
+          <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
+            <img src="https://storage.googleapis.com/swayam2-node/assets/img/swayam_images/mhrd_logo.png" alt="MHRD logo" style="margin-top:18px">
+            <img src="https://scontent.fccu3-1.fna.fbcdn.net/v/t1.0-9/164600720_1379326905752746_2178493731832397688_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=730e14&_nc_ohc=de20bLLYzCsAX9Atggj&_nc_ht=scontent.fccu3-1.fna&oh=93f3b0b084a8b558f1f7f8016f3e479b&oe=60803295"
+            alt="CoursePlus logo" style="margin-top: 12px;margin-left: 20px;">
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 ">
+            <h4>FOLLOW US</h4>
+            <ul class="social_icons">
+              <li><a href="#"><img src="https://storage.googleapis.com/swayam2-node/assets/img/swayam_images/icon_social/icon_facebook_selected.png" alt="Goto facebook follow page" class="facebook"></a></li>
+              <li><a href="#"><img src="https://storage.googleapis.com/swayam2-node/assets/img/swayam_images/icon_social/icon_instagram_selected.png" alt="Goto instagram follow page" class="instagram"></a></li>
+              <li><a href="#"><img src="https://storage.googleapis.com/swayam2-node/assets/img/swayam_images/icon_social/icon_twitter_selected.png" alt="Goto twitter follow page" class="twitter"></a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </section>
+  
+  <section id="legal">
+    <div class="container">
+  
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+  
+    <a href="Privacy.html">Privacy Policy</a></div>
+  
+    <div class="col-md-6 col-sm-6 col-xs-12 helpline">   <a style="cursor:pointer" onclick="email_form()" id="support_popup">CoursePlus Helpline / Support</a> </div>
+  
+    </div>
+    </div>
+  </section>
+  <!--/#bottom-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6"> © 2021 CoursePlus. All rights reserved. </div>
+        <div class="col-sm-6">
+          <div class="pull-right"> Initiative by : Ministry of Education (Govt of India) </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/#footer-->
+  </section>
+  <!--Popup form for support-->
+  
+  <div class="pop_up_container">
+      <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button class="close" style="color: #a7b836;opacity: 1;" data-dismiss="modal" type="button">×</button>
+                      <h4 class="modal-title" style="color:#a7b836;font-family: 'Roboto';font-size: 20px">CoursePlus SUPPORT</h4>
+                  </div>
+                  <div class="modal-body">
+                      <div class="form-group">
+                          <p style="font-family: 'Roboto';font-size: 20px">Please choose the CoursePlus National Coordinator for support.<span class="text-danger">*</span> :</p>
+                          <select id="nc_email" onchange="display_nc_email()">
+                              <option disabled="" selected="">select</option>
+                              <option value="cecmoocs.nc@gmail.com">CEC</option>
+                              <option value="iimbswayam@iimb.ac.in">IIMB</option>
+                              <option value="swayam.support@ignouonline.ac.in">IGNOU</option>
+                              <option value="nmcncert@ciet.nic.in">NCERT</option>
+                              <option value="SWAYAM@NITTTRC.AC.IN">NITTTR</option>
+                              <option value="swayam@nios.ac.in">NIOS</option>
+                              <option value="aicteswayam@aicte-india.org">AICTE</option>
+                              <option value="support@nptel.iitm.ac.in">NPTEL</option>
+                          </select>
+                          <br> <br>
+                          <p id="nc_email_text" style="font-family: 'Roboto';font-size: 18px;margin-left: -20px;"></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <style>
+  .modal-content > .modal-header {
+     background:#003366;
+  }
+  .modal-dialog {
+      width: 800px;
+  }
+  @media (max-width: 768px) {
+    .modal-dialog.modal-sm {
+      width: 300px;
+      margin: 30px auto;
+    }
+  }
+  </style>
+  
+  <div style="position: static;"><div class="a2a_overlay" id="a2a_overlay"></div><div id="a2a_modal" class="a2a_modal" role="dialog" tabindex="-1" aria-label="" style="display:none"><div class="a2a_modal_body a2a_menu" id="a2a_copy_link" style="display:none"><span id="a2a_copy_link_icon" class="a2a_svg a2a_s_link" style="background-color:#0166ff"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M24.4 21.18c0-.36-.1-.67-.36-.92l-2.8-2.8a1.24 1.24 0 0 0-.92-.38c-.38 0-.7.14-.97.43.02.04.1.12.25.26l.3.3.2.24c.08.12.14.24.17.35.03.1.05.23.05.37 0 .36-.13.66-.38.92a1.25 1.25 0 0 1-.92.37 1.4 1.4 0 0 1-.37-.03 1.06 1.06 0 0 1-.35-.18 2.27 2.27 0 0 1-.25-.2 6.82 6.82 0 0 1-.3-.3l-.24-.25c-.3.28-.44.6-.44.98 0 .36.13.66.38.92l2.78 2.8c.24.23.54.35.9.35.37 0 .68-.12.93-.35l1.98-1.97c.26-.25.38-.55.38-.9zm-9.46-9.5c0-.37-.13-.67-.38-.92l-2.78-2.8a1.24 1.24 0 0 0-.9-.37c-.36 0-.67.1-.93.35L7.97 9.92c-.26.25-.38.55-.38.9 0 .36.1.67.37.92l2.8 2.8c.24.25.55.37.92.37.36 0 .7-.13.96-.4-.03-.04-.1-.12-.26-.26s-.24-.23-.3-.3a2.67 2.67 0 0 1-.2-.24 1.05 1.05 0 0 1-.17-.35 1.4 1.4 0 0 1-.04-.37c0-.36.1-.66.36-.9.26-.26.56-.4.92-.4.14 0 .26.03.37.06.12.03.23.1.35.17.1.1.2.16.25.2l.3.3.24.26c.3-.28.44-.6.44-.98zM27 21.17c0 1.07-.38 2-1.15 2.73l-1.98 1.98c-.74.75-1.66 1.12-2.73 1.12-1.1 0-2-.38-2.75-1.14l-2.8-2.8c-.74-.74-1.1-1.65-1.1-2.73 0-1.1.38-2.04 1.17-2.82l-1.18-1.17c-.8.8-1.72 1.18-2.82 1.18-1.08 0-2-.36-2.75-1.12l-2.8-2.8C5.38 12.8 5 11.9 5 10.82c0-1.08.38-2 1.15-2.74L8.13 6.1C8.87 5.37 9.78 5 10.86 5c1.1 0 2 .38 2.75 1.15l2.8 2.8c.74.73 1.1 1.65 1.1 2.72 0 1.1-.38 2.05-1.17 2.82l1.18 1.18c.8-.8 1.72-1.2 2.82-1.2 1.08 0 2 .4 2.75 1.14l2.8 2.8c.76.76 1.13 1.68 1.13 2.76z"></path></svg></span><input id="a2a_copy_link_text" type="text" title="Copy link" readonly=""><div id="a2a_copy_link_copied">✓</div></div><div class="a2a_modal_body a2a_menu a2a_thanks" id="a2a_thanks" style="display:none"><div class="a2a_localize" data-a2a-localize="inner,ThanksForSharing">Thanks for sharing!</div></div></div><div class="a2a_menu a2a_full a2a_localize" id="a2apage_full" role="dialog" tabindex="-1" aria-label="Share" data-a2a-localize="title,Share"><div class="a2a_full_header"><div id="a2apage_find_container" class="a2a_menu_find_container"><input id="a2apage_find" class="a2a_menu_find a2a_localize" type="text" autocomplete="off" title="Find any service" data-a2a-localize="title,FindAnyServiceToAddTo"><span id="a2apage_find_icon" class="a2a_svg a2a_s_find"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#CCC" d="M19.7 18.2l-4.5-4.5c.7-1.1 1.2-2.3 1.2-3.6 0-3.5-2.8-6.3-6.3-6.3s-6.3 2.8-6.3 6.3 2.8 6.3 6.3 6.3c1.4 0 2.6-.4 3.6-1.2l4.5 4.5c.6.6 1.3.7 1.7.2.5-.4.4-1.1-.2-1.7zm-9.6-3.6c-2.5 0-4.5-2.1-4.5-4.5 0-2.5 2.1-4.5 4.5-4.5 2.5 0 4.5 2.1 4.5 4.5s-2 4.5-4.5 4.5z"></path></svg></span></div></div><div class="a2a_full_services" id="a2apage_full_services" role="presentation"></div><div class="a2a_full_footer"><a href="https://www.addtoany.com" title="Share Buttons" rel="noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_a2a" style="background-color:#0166ff"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span>AddToAny</a></div></div><div id="a2apage_dropdown" class="a2a_menu a2a_mini a2a_localize" tabindex="-1" aria-label="Share" data-a2a-localize="label,Share" style="display:none"><div id="a2apage_title_container" class="a2a_menu_title_container" style="display:none"><div id="a2apage_title" class="a2a_menu_title"></div></div><div class="a2a_mini_services" id="a2apage_mini_services"></div><div id="a2apage_cols_container" class="a2a_cols_container"><div class="a2a_col1" id="a2apage_col1"></div><div id="a2apage_2_col1" style="display:none"></div><div class="a2a_clear"></div></div><div class="a2apage_wide a2a_wide"><a href="" id="a2apage_show_more_less" class="a2a_menu_show_more_less a2a_more a2a_localize" title="Show all" data-a2a-localize="title,ShowAll"><span class="a2a_svg a2a_s__default a2a_s_a2a" style="background-color:#0166ff"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span><span class="a2a_localize" data-a2a-localize="inner,More">More…</span></a></div></div></div><script>
+  function email_form(){
+      try{
+          $("#myModal").modal('show');
+      }catch(e){
+          jQuery.noConflict();
+          $("#myModal").modal('show');
+      }
+  }
+  function display_nc_email(){
+      document.getElementById("nc_email_text").innerHTML = "Please send an email to <b>" + document.getElementById("nc_email").value + "</b> regarding your queries / issues";
+  }
+  </script>
+  <style>
+    .main{
+     position: absolute;
+     bottom: 0px;
+     width: 100%;
+     }
+     @media (max-width: 767px) {
+     body{
+     padding-bottom: 400px;
+     }
+     }
+     @media (min-width: 768px) and (max-width: 991px) {
+     body{
+     padding-bottom: 240px;
+     }
+     }
+     @media (min-width: 992px) {
+     body{
+     padding-bottom: 175px;
+     }
+     }
+  
+  </style>
+  <script>
+  $('.carousel').carousel({
+    interval: 5000
+  })
+  </script>
+  
+  
+  <script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+    $(".bccontainer").css("padding-top", $('header').outerHeight());
+  });
+  
+  $(document).ready(function() {
+  
+    $(".CheckboxContainer .container").click(function(){
+  
+        $("input[type='checkbox']").click(function(e){
+  
+            $div = $(this).parent();
+            text = $div[0].firstChild.nodeValue;
+            id_text = text.replace(/\s+/g, "");
+            id_text = id_text.replace("&", "_");
+  
+            if($(this).prop("checked") == true){
+              $(".sf-filtertags ul").prepend("<li>"+text+"<a href='#' name='"+text+"' id='"+id_text+"' onclick='removeTagAndUncheck(this.id,this.name)'> X </a></li>");
+            }
+            else{
+              $("#"+id_text).parent().remove();
+            }
+  
+            clearAllShowHide();
+            e.stopImmediatePropagation();
+          });
+      });
+  
+      $('.dropdown-submenu a.submenu').on("click", function(e){
+          $.each($(".dropdown-submenu div.dropdown-menu"), function(){
+              if($(this).is(":visible")) {
+                  if( $( "div" ).index( $(this).parent() ) != $( "div" ).index( $(e.target).next('div.dropdown-menu').parent() ) ){
+                      $(this).css("display","none");
+                      $(this).parent().find("i").removeClass("fa-angle-right");
+                      $(this).parent().find("i").addClass("fa-angle-down");
+                  }
+              }
+          });
+  
+          $(e.target).next('div').toggle();
+  
+          if(($(e.target).next('div')).is( ":visible" )){
+              $(e.target).find("i").removeClass("fa-angle-down");
+              $(e.target).find("i").addClass("fa-angle-right");
+          }
+          else{
+              $(e.target).find("i").removeClass("fa-angle-right");
+              $(e.target).find("i").addClass("fa-angle-down");
+          }
+          e.stopPropagation();
+          e.preventDefault();
+      });
+  
+      $(".dropdown").on("show.bs.dropdown", function(event){
+          $( event.target).find("div.dropdown-menu").css("display","table") ;
+          $(event.target).find("i").removeClass("fa-angle-right");
+          $(event.target).find("i").addClass("fa-angle-down");
+      });
+      $(".dropdown").on("shown.bs.dropdown", function(){
+          $('.dropdown-submenu a.submenu').next('div').toggle();
+      });
+      $(".dropdown").on("hide.bs.dropdown", function(event){
+          $( event.target).find("div.dropdown-menu").css("display","none") ;
+      });
+  });
+  
+  function clearAllShowHide(){
+    if ( $('.sf-filtertags ul li').length > 2 ) {
+      $("#clearAllTags").css("visibility","visible");
+    }else{
+      $("#clearAllTags").css("visibility","hidden");
+    }
+  }
+  
+  function removeTagAndUncheck(id, name){
+    $("input[name='"+name.trim()+"']:checkbox").prop('checked', false);
+    $("#"+id).parent().remove();
+    clearAllShowHide();
+  }
+  
+  function clearAllTags(){
+    $('.sf-filtertags ul').empty();
+    $('.sf-filtertags ul').prepend('<li id="clearAllTags" style="border:none;visibility: hidden;" onclick="clearAllTags()"><a href="#">Clear All</a></li>');
+    $('input:checkbox').removeAttr('checked');
+    clearAllShowHide();
+  }
+  
+  //Hide Dropdown popover on out-focus
+  $(document).on("focusin", function(event){
+      var $trigger = $(".dropdown");
+      if($trigger !== event.target && !$trigger.has(event.target).length){
+          try{
+              $(".dropdown-menu").slideUp("fast");
+          }catch(e){
+              jQuery.noConflict();
+              $(".dropdown-menu").slideUp("fast");
+          }
+      }
+  });
+  
+  $(window).click(function() {
+      try{
+          $(".dropdown-menu").slideUp("fast");
+      }catch(e){
+          jQuery.noConflict();
+          $(".dropdown-menu").slideUp("fast");
+      }
+  });
+  </script>
+  
+  <script>
+  $('a').click(function(){
+      if($(this).text().trim() == 'Show More' ){
+          $(this).html('Show Less <i class="fa fa-chevron-up"></i>');
+      }
+      else if($(this).text().trim() == 'Show Less' ){
+           $(this).html('Show More <i class="fa fa-chevron-down"></i>');
+      }
+  });
+  
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-46447969-1', 'nptel.ac.in');
+        ga('send', 'pageview');
+      </script>
+      <!---->
+      <div class="gcb-html-hook" id="base-before-body-tag-ends"><!-- base.before_body_tag_ends --></div>
+  
+    
+  <script src="https://storage.googleapis.com/swayam2-node/assets/lib/google-code-prettify/prettify.js" type="text/javascript" id="https://storage.googleapis.com/swayam2-node/assets/lib/google-code-prettify/prettify.js"></script>
+  <script src="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/activity-generic-1.3.js" type="text/javascript" id="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/activity-generic-1.3.js"></script>
+  <script src="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/main.js" type="text/javascript" id="https://storage.googleapis.com/swayam2-node/modules/nptel/assets/js/main.js"></script>
+</body>
+</html>
